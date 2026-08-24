@@ -1,16 +1,17 @@
 # Chain health
 
-Last checked: 2026-08-24T15:51:06+00:00 (automated nightly run from a GitHub-hosted
+Last checked: 2026-08-24T15:52:44+00:00 (automated nightly run from a GitHub-hosted
 runner outside Israel — a geo-blocked portal shows up here as down even
 when it works from an Israeli connection).
 
 | Chain | Status | Stores | Prices | Promos | Note |
 |---|---|---|---|---|---|
 | `shufersal` | ✅ ok | 417 | 6558 | 1 |  |
-| `super-pharm` | ✅ ok | 306 | 8735 | 924 |  |
+| `super-pharm` | ⛔ down | — | — | — | stores: FileNotFound: super-pharm: no Stores file | prices: FileNotFound: super-pharm: no PriceFull file | promos: FileNotFound: super-pharm: no PromoFull file |
 | `wolt` | ✅ ok | 34 | 0 | 945 |  |
 | `carrefour` | ✅ ok | 147 | 11188 | 2310 |  |
-| `hatzi-hinam` | ✅ ok | 13 | 597 | 768 |  |
+| `hatzi-hinam` | ⛔ down | — | — | — | stores: PortalError: GET https://shop.hazi-hinam.co.il/Prices failed after 3 attempts: Client error '403 Forbidden' for url 'https://shop.hazi-hinam.co.il/Prices?t=3&p=1'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403 | prices: PortalError: GET https://shop. |
 | `rami-levy` | ✅ ok | 99 | 13766 | 2727 |  |
 | `tiv-taam` | ✅ ok | 54 | 119 | 1947 |  |
 | `yochananof` | ✅ ok | 51 | 10824 | 2692 |  |
@@ -34,7 +35,7 @@ when it works from an Israeli connection).
 | `super-sapir` | ✅ ok | 68 | 3453 | 0 |  |
 | `zol-vebegadol` | ✅ ok | 35 | 3812 | 1173 |  |
 | `city-market` | ✅ ok | 28 | 2891 | 323 |  |
-| `victory` | ✅ ok | 70 | 10140 | 5262 |  |
-| `mahsanei-hashuk` | ✅ ok | 71 | 12475 | 7244 |  |
-| `het-cohen` | ✅ ok | 5 | 8896 | 3192 |  |
+| `victory` | ⛔ down | — | — | — | stores: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after 3 attempts: timed out | prices: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after 3 attempts: timed out | promos: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after  |
+| `mahsanei-hashuk` | ⛔ down | — | — | — | stores: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after 3 attempts: timed out | prices: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after 3 attempts: timed out | promos: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after  |
+| `het-cohen` | ⛔ down | — | — | — | stores: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after 3 attempts: timed out | prices: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after 3 attempts: timed out | promos: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after  |
 | `nativ-hahesed` | ⛔ down | — | — | — | portal still unreachable (PortalError) |

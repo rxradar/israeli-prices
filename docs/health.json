@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-08-24T15:51:06+00:00",
+  "checked_at": "2026-08-24T15:52:44+00:00",
   "chains": [
     {
       "slug": "shufersal",
@@ -10,10 +10,11 @@
     },
     {
       "slug": "super-pharm",
-      "stores": 306,
-      "prices": 8735,
-      "promos": 924,
-      "status": "ok"
+      "stores": null,
+      "prices": null,
+      "promos": null,
+      "status": "down",
+      "note": "stores: FileNotFound: super-pharm: no Stores file | prices: FileNotFound: super-pharm: no PriceFull file | promos: FileNotFound: super-pharm: no PromoFull file"
     },
     {
       "slug": "wolt",
@@ -31,10 +32,11 @@
     },
     {
       "slug": "hatzi-hinam",
-      "stores": 13,
-      "prices": 597,
-      "promos": 768,
-      "status": "ok"
+      "stores": null,
+      "prices": null,
+      "promos": null,
+      "status": "down",
+      "note": "stores: PortalError: GET https://shop.hazi-hinam.co.il/Prices failed after 3 attempts: Client error '403 Forbidden' for url 'https://shop.hazi-hinam.co.il/Prices?t=3&p=1'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403 | prices: PortalError: GET https://shop."
     },
     {
       "slug": "rami-levy",
@@ -199,24 +201,27 @@
     },
     {
       "slug": "victory",
-      "stores": 70,
-      "prices": 10140,
-      "promos": 5262,
-      "status": "ok"
+      "stores": null,
+      "prices": null,
+      "promos": null,
+      "status": "down",
+      "note": "stores: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after 3 attempts: timed out | prices: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after 3 attempts: timed out | promos: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after "
     },
     {
       "slug": "mahsanei-hashuk",
-      "stores": 71,
-      "prices": 12475,
-      "promos": 7244,
-      "status": "ok"
+      "stores": null,
+      "prices": null,
+      "promos": null,
+      "status": "down",
+      "note": "stores: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after 3 attempts: timed out | prices: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after 3 attempts: timed out | promos: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after "
     },
     {
       "slug": "het-cohen",
-      "stores": 5,
-      "prices": 8896,
-      "promos": 3192,
-      "status": "ok"
+      "stores": null,
+      "prices": null,
+      "promos": null,
+      "status": "down",
+      "note": "stores: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after 3 attempts: timed out | prices: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after 3 attempts: timed out | promos: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after "
     },
     {
       "slug": "nativ-hahesed",
