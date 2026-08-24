@@ -1,0 +1,65 @@
+﻿<Root>
+  <ChainID>7290027600007</ChainID>
+  <SubChainID>001</SubChainID>
+  <StoreID>001</StoreID>
+  <BikoretNo>9</BikoretNo>
+  <Items>
+    <Item>
+      <PriceUpdateTime>2025-12-28T14:15:00</PriceUpdateTime>
+      <ItemCode>10900302814</ItemCode>
+      <LastSaleDateTime>2026-08-23T17:50:22</LastSaleDateTime>
+      <ItemType>1</ItemType>
+      <ItemName>ניילון נצמד 30ס"מ*30 מטר</ItemName>
+      <ManufactureName>ריינולדס</ManufactureName>
+      <ManufactureCountry>CN</ManufactureCountry>
+      <ManufactureItemDescription>ניילון נצמד 30ס"מ*30 מטר</ManufactureItemDescription>
+      <UnitQty>מטרים</UnitQty>
+      <Quantity>30.00</Quantity>
+      <UnitOfMeasure>מטרים</UnitOfMeasure>
+      <bIsWeighted>0</bIsWeighted>
+      <QtyInPackage>1</QtyInPackage>
+      <ItemPrice>10.00</ItemPrice>
+      <UnitOfMeasurePrice>0.33</UnitOfMeasurePrice>
+      <AllowDiscount>1</AllowDiscount>
+      <ItemStatus />
+    </Item>
+    <Item>
+      <PriceUpdateTime>2024-12-31T12:36:00</PriceUpdateTime>
+      <ItemCode>11182700954</ItemCode>
+      <LastSaleDateTime>2026-08-23T20:26:40</LastSaleDateTime>
+      <ItemType>1</ItemType>
+      <ItemName>שעועית שחורה 439 גרם</ItemName>
+      <ManufactureName>האנאובר פודס קורפורשיין</ManufactureName>
+      <ManufactureCountry>US</ManufactureCountry>
+      <ManufactureItemDescription>שעועית שחורה 439 גרם</ManufactureItemDescription>
+      <UnitQty>גרם</UnitQty>
+      <Quantity>439.00</Quantity>
+      <UnitOfMeasure>100 גרם</UnitOfMeasure>
+      <bIsWeighted>0</bIsWeighted>
+      <QtyInPackage>1</QtyInPackage>
+      <ItemPrice>11.50</ItemPrice>
+      <UnitOfMeasurePrice>2.62</UnitOfMeasurePrice>
+      <AllowDiscount>1</AllowDiscount>
+      <ItemStatus />
+    </Item>
+    <Item>
+      <PriceUpdateTime>2025-04-28T14:28:00</PriceUpdateTime>
+      <ItemCode>11210000032</ItemCode>
+      <LastSaleDateTime>2026-08-11T20:54:35</LastSaleDateTime>
+      <ItemType>1</ItemType>
+      <ItemName>רוטב טבסקו משפחתי 360מ"ל</ItemName>
+      <ManufactureName>ניצן</ManufactureName>
+      <ManufactureCountry>US</ManufactureCountry>
+      <ManufactureItemDescription>רוטב טבסקו משפחתי 360מ"ל</ManufactureItemDescription>
+      <UnitQty>מיליליטר</UnitQty>
+      <Quantity>360.00</Quantity>
+      <UnitOfMeasure>100 מיליליטר</UnitOfMeasure>
+      <bIsWeighted>0</bIsWeighted>
+      <QtyInPackage>0</QtyInPackage>
+      <ItemPrice>53.90</ItemPrice>
+      <UnitOfMeasurePrice>14.97</UnitOfMeasurePrice>
+      <AllowDiscount>1</AllowDiscount>
+      <ItemStatus />
+    </Item>
+    </Items>
+</Root>

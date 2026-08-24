@@ -1,0 +1,65 @@
+<Root>
+  <ChainID>7290172900007</ChainID>
+  <SubChainID>000</SubChainID>
+  <StoreID>142</StoreID>
+  <BikoretNo>0</BikoretNo>
+  <Items>
+    <Item>
+      <PriceUpdateTime>2025-06-16T15:52:52.000</PriceUpdateTime>
+      <ItemCode>3600523991556</ItemCode>
+      <LastSaleDateTime>2026-07-20T16:17:51.000</LastSaleDateTime>
+      <ItemType>1</ItemType>
+      <ItemName>לוריאל הידרה גינייס גל לחות לעור מעורב</ItemName>
+      <ManufactureName>לוריאל</ManufactureName>
+      <ManufactureCountry>DE</ManufactureCountry>
+      <ManufactureItemDescription>HYDRA GENIUS ג'ל לחות קליל עד 72 שעות לעור רגיל עד מעורב</ManufactureItemDescription>
+      <UnitQty>מיליליטר</UnitQty>
+      <Quantity>70.00</Quantity>
+      <UnitOfMeasure>100 מיליליטר</UnitOfMeasure>
+      <bIsWeighted>0</bIsWeighted>
+      <QtyInPackage>1.00</QtyInPackage>
+      <ItemPrice>66.00</ItemPrice>
+      <UnitOfMeasurePrice>94.28</UnitOfMeasurePrice>
+      <AllowDiscount>1</AllowDiscount>
+      <ItemStatus>1</ItemStatus>
+    </Item>
+    <Item>
+      <PriceUpdateTime>2025-05-25T08:58:25.000</PriceUpdateTime>
+      <ItemCode>7290108452181</ItemCode>
+      <LastSaleDateTime>2026-08-22T13:27:15.000</LastSaleDateTime>
+      <ItemType>1</ItemType>
+      <ItemName>לייף פד ספיגה 10 יח' NIGHT</ItemName>
+      <ManufactureName>ONTEX</ManufactureName>
+      <ManufactureCountry>BE</ManufactureCountry>
+      <ManufactureItemDescription>Everyday  תחבושת לבריחת שתן ללילה</ManufactureItemDescription>
+      <UnitQty>יחידות</UnitQty>
+      <Quantity>10.00</Quantity>
+      <UnitOfMeasure>יחידות</UnitOfMeasure>
+      <bIsWeighted>0</bIsWeighted>
+      <QtyInPackage>1.00</QtyInPackage>
+      <ItemPrice>17.90</ItemPrice>
+      <UnitOfMeasurePrice>17.90</UnitOfMeasurePrice>
+      <AllowDiscount>1</AllowDiscount>
+      <ItemStatus>1</ItemStatus>
+    </Item>
+    <Item>
+      <PriceUpdateTime>2026-03-08T06:33:34.000</PriceUpdateTime>
+      <ItemCode>3337872413025</ItemCode>
+      <LastSaleDateTime>2026-08-08T15:59:08.000</LastSaleDateTime>
+      <ItemType>1</ItemType>
+      <ItemName>לרפ אפקלאר מאט קרם לחות לעור שמן 40 מל</ItemName>
+      <ManufactureName>נורוליס</ManufactureName>
+      <ManufactureCountry>FR</ManufactureCountry>
+      <ManufactureItemDescription>אפקלאר מאט קרם לחות לאיזון רמת השומן בעור</ManufactureItemDescription>
+      <UnitQty>מיליליטר</UnitQty>
+      <Quantity>40.00</Quantity>
+      <UnitOfMeasure>100 מיליליטר</UnitOfMeasure>
+      <bIsWeighted>0</bIsWeighted>
+      <QtyInPackage>1.00</QtyInPackage>
+      <ItemPrice>119.90</ItemPrice>
+      <UnitOfMeasurePrice>299.75</UnitOfMeasurePrice>
+      <AllowDiscount>1</AllowDiscount>
+      <ItemStatus>1</ItemStatus>
+    </Item>
+    </Items>
+</Root>

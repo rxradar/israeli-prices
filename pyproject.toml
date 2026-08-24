@@ -1,0 +1,49 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "israeli-prices"
+version = "0.1.0.dev0"
+description = "Typed Python client for Israel's retail price-transparency data: prices, promotions and stores of every covered chain, fetched and parsed into pydantic models."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "RxRadar Inc." }]
+keywords = [
+    "israel",
+    "prices",
+    "supermarket",
+    "pharmacy",
+    "price-transparency",
+    "shufersal",
+    "super-pharm",
+    "promotions",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "httpx>=0.27",
+    "pydantic>=2.7",
+]
+
+[project.optional-dependencies]
+pandas = ["pandas>=2.0"]
+dev = ["pytest>=8"]
+
+[project.urls]
+Homepage = "https://github.com/rxradar/israeli-prices"
+Issues = "https://github.com/rxradar/israeli-prices/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/israeli_prices"]

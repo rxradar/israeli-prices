@@ -1,0 +1,32 @@
+<Root>
+  <ChainID>7290172900007</ChainID>
+  <ChainName>סופר פארם ישראל</ChainName>
+  <LastUpdateDate>2026-08-24</LastUpdateDate>
+  <LastUpdateTime>07:00:16</LastUpdateTime>
+  <SubChains>
+    <SubChain>
+      <SubChainID>000</SubChainID>
+      <SubChainName />
+      <Stores>
+        <Store>
+          <StoreID>096</StoreID>
+          <BikoretNo>0</BikoretNo>
+          <StoreType>1</StoreType>
+          <StoreName>סופר-פארם בן-גוריון</StoreName>
+          <Address>בן-גוריון רמת-גן</Address>
+          <City>8600</City>
+          <ZIPCode>5235301</ZIPCode>
+        </Store>
+        <Store>
+          <StoreID>306</StoreID>
+          <BikoretNo>0</BikoretNo>
+          <StoreType>1</StoreType>
+          <StoreName>סופר-פארם כפר-יונה</StoreName>
+          <Address>שד' בן-גוריון 1</Address>
+          <City>168</City>
+          <ZIPCode>4030000</ZIPCode>
+        </Store>
+        </Stores>
+    </SubChain>
+  </SubChains>
+</Root>

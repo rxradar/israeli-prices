@@ -1,0 +1,84 @@
+<Root>
+  <ChainID>7290172900007</ChainID>
+  <SubChainID>000</SubChainID>
+  <StoreID>209</StoreID>
+  <BikoretNo>0</BikoretNo>
+  <Promotions>
+    <Promotion>
+      <PromotionUpdateTime>2026-08-23T08:33:13.000</PromotionUpdateTime>
+      <AllowMultipleDiscounts>1</AllowMultipleDiscounts>
+      <PromotionID>0004719138</PromotionID>
+      <PromotionDescription>LANCOME  BOCAGE דאודורנט ספריי בוקאז 125 מ"ל 65 ₪</PromotionDescription>
+      <PromotionStartDateTime>2026-08-05T00:00:00.000</PromotionStartDateTime>
+      <PromotionEndDateTime>2026-09-01T23:59:59.000</PromotionEndDateTime>
+      <PromotionStartHour />
+      <PromotionEndHour />
+      <PromotionDays />
+      <RedemptionLimit />
+      <MinNoOfItemOffered>00001</MinNoOfItemOffered>
+      <ClubID>0=אין</ClubID>
+      <IsGiftItem>1</IsGiftItem>
+      <AdditionalIsCoupon>0</AdditionalIsCoupon>
+      <AdditionalRestrictions>0.00</AdditionalRestrictions>
+      <Remarks />
+      <Groups>
+        <Group>
+          <GroupID>1</GroupID>
+          <MinPurchaseAmount>0.00</MinPurchaseAmount>
+          <DiscountType />
+          <PromotionItems>
+            <PromotionItem>
+              <ItemCode>3147758051216</ItemCode>
+              <ItemType>1</ItemType>
+              <RewardType>3</RewardType>
+              <MinQty>1.00</MinQty>
+              <MaxQty />
+              <DiscountRate>50.00</DiscountRate>
+              <DiscountedPrice>65.00</DiscountedPrice>
+              <DiscountedPricePerMida>52.00</DiscountedPricePerMida>
+              <bIsWeighted>0</bIsWeighted>
+            </PromotionItem>
+          </PromotionItems>
+        </Group>
+      </Groups>
+    </Promotion>
+    <Promotion>
+      <PromotionUpdateTime>2026-08-23T08:33:14.000</PromotionUpdateTime>
+      <AllowMultipleDiscounts>1</AllowMultipleDiscounts>
+      <PromotionID>0004719139</PromotionID>
+      <PromotionDescription>LANCOME  BOCAGE דאודורנט רול און בוקאז 50 מ"ל 65 ₪</PromotionDescription>
+      <PromotionStartDateTime>2026-08-05T00:00:00.000</PromotionStartDateTime>
+      <PromotionEndDateTime>2026-09-01T23:59:59.000</PromotionEndDateTime>
+      <PromotionStartHour />
+      <PromotionEndHour />
+      <PromotionDays />
+      <RedemptionLimit />
+      <MinNoOfItemOffered>00001</MinNoOfItemOffered>
+      <ClubID>0=אין</ClubID>
+      <IsGiftItem>1</IsGiftItem>
+      <AdditionalIsCoupon>0</AdditionalIsCoupon>
+      <AdditionalRestrictions>0.00</AdditionalRestrictions>
+      <Remarks />
+      <Groups>
+        <Group>
+          <GroupID>1</GroupID>
+          <MinPurchaseAmount>0.00</MinPurchaseAmount>
+          <DiscountType />
+          <PromotionItems>
+            <PromotionItem>
+              <ItemCode>3605530931663</ItemCode>
+              <ItemType>1</ItemType>
+              <RewardType>3</RewardType>
+              <MinQty>1.00</MinQty>
+              <MaxQty />
+              <DiscountRate>50.00</DiscountRate>
+              <DiscountedPrice>65.00</DiscountedPrice>
+              <DiscountedPricePerMida>130.00</DiscountedPricePerMida>
+              <bIsWeighted>0</bIsWeighted>
+            </PromotionItem>
+          </PromotionItems>
+        </Group>
+      </Groups>
+    </Promotion>
+    </Promotions>
+</Root>
