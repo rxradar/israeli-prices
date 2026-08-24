@@ -111,20 +111,19 @@ def main() -> None:
         + "\n"
     )
 
-    icons = {"ok": "✅", "degraded": "⚠️", "down": "⛔", "attention": "👀", "geo-blocked": "🌍"}
     lines = [
         "# Chain health",
         "",
         f"Last checked: {checked_at} (automated nightly run from a GitHub-hosted",
-        "runner outside Israel — a geo-blocked portal shows up here as down even",
-        "when it works from an Israeli connection).",
+        "runner outside Israel; geo-blocked = the portal only answers Israeli",
+        "IPs, verified through an Israeli proxy).",
         "",
         "| Chain | Status | Stores | Prices | Promos | Note |",
         "|---|---|---|---|---|---|",
     ]
     for r in rows:
         lines.append(
-            f"| `{r['slug']}` | {icons[r['status']]} {r['status']} "
+            f"| `{r['slug']}` | `{r['status']}` "
             f"| {r.get('stores', '—') if r.get('stores') is not None else '—'} "
             f"| {r.get('prices', '—') if r.get('prices') is not None else '—'} "
             f"| {r.get('promos', '—') if r.get('promos') is not None else '—'} "

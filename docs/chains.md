@@ -4,17 +4,17 @@ Every chain required to publish price-transparency files, per the
 Ministry of Economy's official portal list (gov.il). Login usernames
 are public — they are published on the same government page.
 
-Status: ✅ adapter implemented · 🔜 registered, adapter planned.
+Status: `live` = adapter implemented and verified · `planned` = registered, adapter to come.
 
 ## Self-hosted portals (no auth)
 
 | Chain | Slug | Sector | Portal | Status |
 |---|---|---|---|---|
-| Shufersal (incl. Be Pharm) | `shufersal` | supermarket | prices.shufersal.co.il | ✅ |
-| Super-Pharm | `super-pharm` | pharmacy | prices.super-pharm.co.il | ✅ |
-| Wolt Market | `wolt` | delivery | wm-gateway.wolt.com/isr-prices | ✅ |
-| Hatzi Hinam | `hatzi-hinam` | supermarket | shop.hazi-hinam.co.il/Prices | ✅ |
-| Carrefour Israel | `carrefour` | supermarket | prices.carrefour.co.il | ✅ |
+| Shufersal (incl. Be Pharm) | `shufersal` | supermarket | prices.shufersal.co.il | `live` |
+| Super-Pharm | `super-pharm` | pharmacy | prices.super-pharm.co.il | `live` |
+| Wolt Market | `wolt` | delivery | wm-gateway.wolt.com/isr-prices | `live` |
+| Hatzi Hinam | `hatzi-hinam` | supermarket | shop.hazi-hinam.co.il/Prices | `live` |
+| Carrefour Israel | `carrefour` | supermarket | prices.carrefour.co.il | `live` |
 
 Wolt's feed covers only **Wolt Market**, its own dark-store venues
 (~34 across the country) — the thousands of partner supermarkets,
@@ -34,19 +34,19 @@ passwords) are published on gov.il.
 
 | Chain | Slug | Username | Status |
 |---|---|---|---|
-| Rami Levy | `rami-levy` | RamiLevi | ✅ |
-| Tiv Taam | `tiv-taam` | TivTaam | ✅ |
-| Yochananof | `yochananof` | yohananof | ✅ |
-| Osher Ad | `osher-ad` | osherad | ✅ |
-| Dor Alon | `dor-alon` | doralon | ✅ |
-| Keshet Teamim | `keshet-teamim` | Keshet | ✅ |
-| Super Cofix | `super-cofix` | SuperCofixApp | ✅ |
-| Politzer | `politzer` | politzer | ✅ |
-| Stop Market | `stop-market` | Stop_Market | ✅ |
-| Fresh Market | `fresh-market` | freshmarket | ✅ |
-| Salach Dabach | `salach-dabach` | SalachD | ✅ |
-| Super Yuda | `super-yuda` | yuda_ho | ✅ |
-| Yellow | `yellow` | Paz_bo | ✅ |
+| Rami Levy | `rami-levy` | RamiLevi | `live` |
+| Tiv Taam | `tiv-taam` | TivTaam | `live` |
+| Yochananof | `yochananof` | yohananof | `live` |
+| Osher Ad | `osher-ad` | osherad | `live` |
+| Dor Alon | `dor-alon` | doralon | `live` |
+| Keshet Teamim | `keshet-teamim` | Keshet | `live` |
+| Super Cofix | `super-cofix` | SuperCofixApp | `live` |
+| Politzer | `politzer` | politzer | `live` |
+| Stop Market | `stop-market` | Stop_Market | `live` |
+| Fresh Market | `fresh-market` | freshmarket | `live` |
+| Salach Dabach | `salach-dabach` | SalachD | `live` |
+| Super Yuda | `super-yuda` | yuda_ho | `live` |
+| Yellow | `yellow` | Paz_bo | `live` |
 
 Cerberus quirks handled by the adapter: CSRF login flow with ~30-minute
 session expiry (automatic re-login), `NULL*` placeholder files skipped,
@@ -60,16 +60,16 @@ One adapter covers all 10.
 
 | Chain | Slug | Sector | Status |
 |---|---|---|---|
-| Good Pharm | `good-pharm` | pharmacy | ✅ |
-| Super Bareket | `super-bareket` | supermarket | ✅ |
-| King Store | `king-store` | supermarket | ✅ |
-| Maayan 2000 | `maayan-2000` | supermarket | ✅ |
-| Meshnat Yosef | `meshnat-yosef` | supermarket | ✅ |
-| Shefa Birkat Hashem | `shefa-birkat-hashem` | supermarket | ✅ |
-| Shuk Hayir | `shuk-hayir` | supermarket | ✅ |
-| Super Sapir | `super-sapir` | supermarket | ✅ |
-| Zol VeBegadol | `zol-vebegadol` | supermarket | ✅ |
-| City Market | `city-market` | supermarket | ✅ |
+| Good Pharm | `good-pharm` | pharmacy | `live` |
+| Super Bareket | `super-bareket` | supermarket | `live` |
+| King Store | `king-store` | supermarket | `live` |
+| Maayan 2000 | `maayan-2000` | supermarket | `live` |
+| Meshnat Yosef | `meshnat-yosef` | supermarket | `live` |
+| Shefa Birkat Hashem | `shefa-birkat-hashem` | supermarket | `live` |
+| Shuk Hayir | `shuk-hayir` | supermarket | `live` |
+| Super Sapir | `super-sapir` | supermarket | `live` |
+| Zol VeBegadol | `zol-vebegadol` | supermarket | `live` |
+| City Market | `city-market` | supermarket | `live` |
 
 Bina quirks handled by the adapter: JSON listing capped at 1000 rows
 covering the current day, ZIP archives served under .gz names, mixed
@@ -83,15 +83,15 @@ One adapter covers all 3, through the JSON API
 
 | Chain | Slug | Status |
 |---|---|---|
-| Victory | `victory` | ✅ |
-| Mahsanei HaShuk | `mahsanei-hashuk` | ✅ |
-| Het Cohen | `het-cohen` | ✅ |
+| Victory | `victory` | `live` |
+| Mahsanei HaShuk | `mahsanei-hashuk` | `live` |
+| Het Cohen | `het-cohen` | `live` |
 
 ## One-off endpoints
 
 | Chain | Slug | Status |
 |---|---|---|
-| Nativ HaHesed | `nativ-hahesed` | ⛔ portal down (HTTP 500 on every path, 2026-08-24) |
+| Nativ HaHesed | `nativ-hahesed` | `down` — portal answers HTTP 500 on every path (2026-08-24) |
 
 Nativ HaHesed's portal (a bare-IP IIS host) has been returning HTTP 500
 since at least July 2026; the chain — a ~90-branch haredi-sector
