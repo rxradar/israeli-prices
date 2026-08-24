@@ -29,9 +29,12 @@ def parse_filename(name: str) -> tuple[FileType | None, str | None, datetime | N
     file name, e.g. ``PriceFull7290027600007-001-001-20260824-030000.gz``.
 
     Segment layout between the chain id and the extension varies per
-    chain; the store id is taken as the last numeric segment before the
-    YYYYMMDD segment when at least two segments precede it (sub-chain,
-    store) — Stores files usually carry only the sub-chain.
+    chain. The timestamp is either a YYYYMMDD segment (optionally
+    followed by HHMMSS) or a single YYYYMMDDHHMM segment. The store id
+    is the last numeric segment before the timestamp when at least two
+    segments precede it (sub-chain, store); when only one does, it is
+    the store for per-store file types and the sub-chain for Stores
+    files.
     """
     file_type = None
     for prefix, ft in _TYPE_PREFIXES:
@@ -45,20 +48,25 @@ def parse_filename(name: str) -> tuple[FileType | None, str | None, datetime | N
 
     segments = m.group(3).split("-")
     date_idx = next(
-        (i for i, s in enumerate(segments) if len(s) == 8 and s.isdigit()), None
+        (i for i, s in enumerate(segments) if len(s) in (8, 12) and s.isdigit()),
+        None,
     )
     store_id = None
     published_at = None
     if date_idx is not None:
         if date_idx >= 2:
             store_id = segments[date_idx - 1]
+        elif date_idx == 1 and file_type not in (FileType.STORES, None):
+            store_id = segments[0]
+        seg = segments[date_idx]
         try:
-            published_at = datetime.strptime(segments[date_idx], "%Y%m%d")
-            nxt = segments[date_idx + 1] if date_idx + 1 < len(segments) else ""
-            if len(nxt) == 6 and nxt.isdigit():
-                published_at = datetime.strptime(
-                    segments[date_idx] + nxt, "%Y%m%d%H%M%S"
-                )
+            if len(seg) == 12:
+                published_at = datetime.strptime(seg, "%Y%m%d%H%M")
+            else:
+                published_at = datetime.strptime(seg, "%Y%m%d")
+                nxt = segments[date_idx + 1] if date_idx + 1 < len(segments) else ""
+                if len(nxt) == 6 and nxt.isdigit():
+                    published_at = datetime.strptime(seg + nxt, "%Y%m%d%H%M%S")
         except ValueError:
             published_at = None
     return file_type, store_id, published_at

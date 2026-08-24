@@ -34,6 +34,21 @@ def test_stores_file_with_non_time_suffix():
     assert published == datetime(2026, 8, 24)
 
 
+def test_twelve_digit_timestamp_with_single_store_segment():
+    # Super Cofix / Keshet legacy naming: one segment before YYYYMMDDHHMM
+    ft, store, published = parse_filename("PriceFull7291056200008-999-202608240010.gz")
+    assert ft == FileType.PRICE_FULL
+    assert store == "999"
+    assert published == datetime(2026, 8, 24, 0, 10)
+
+
+def test_bare_xml_stores_file():
+    ft, store, published = parse_filename("Stores7290058140886-000-20260824-050500.xml")
+    assert ft == FileType.STORES
+    assert store is None
+    assert published == datetime(2026, 8, 24, 5, 5, 0)
+
+
 def test_same_store_is_lenient_about_zero_padding():
     assert same_store("001", "1")
     assert same_store("142", "142")

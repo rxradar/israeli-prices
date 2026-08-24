@@ -8,19 +8,21 @@ this library ships an adapter for today.
 
 from __future__ import annotations
 
+from functools import partial
+
 from ..core.http import HttpClient
 from ..exceptions import ChainNotFound
 from ..models import ChainInfo
 from .base import ChainAdapter
+from .cerberus import CERBERUS_CHAINS, make_cerberus_adapter
 from .shufersal import ShufersalAdapter
 from .superpharm import SuperPharmAdapter
 
-_ADAPTERS: dict[str, type[ChainAdapter]] = {
+_ADAPTERS: dict = {
     "shufersal": ShufersalAdapter,
     "super-pharm": SuperPharmAdapter,
+    **{c.slug: partial(make_cerberus_adapter, c.slug) for c in CERBERUS_CHAINS},
 }
-
-_CERBERUS = "https://url.retail.publishedprices.co.il"
 
 
 def _bina(prefix: str) -> str:
@@ -38,42 +40,8 @@ CHAINS: list[ChainInfo] = [
               portal_url="https://shop.hazi-hinam.co.il/Prices", portal_family="self-hosted"),
     ChainInfo(slug="carrefour", name="Carrefour Israel", name_he="קרפור", chain_id="7290055700007",
               portal_url="https://prices.carrefour.co.il", portal_family="self-hosted"),
-    # --- Cerberus shared portal (login form; usernames published on gov.il) ---
-    ChainInfo(slug="rami-levy", name="Rami Levy", name_he="רמי לוי", chain_id="7290058140886",
-              portal_url=_CERBERUS, portal_family="cerberus", username="RamiLevi"),
-    ChainInfo(slug="tiv-taam", name="Tiv Taam", name_he="טיב טעם", chain_id="7290873255550",
-              portal_url=_CERBERUS, portal_family="cerberus", username="TivTaam"),
-    ChainInfo(slug="yochananof", name="Yochananof", name_he="יוחננוף",
-              chain_id="7290803800003", portal_url=_CERBERUS, portal_family="cerberus",
-              username="yohananof"),
-    ChainInfo(slug="osher-ad", name="Osher Ad", name_he="אושר עד", chain_id="7290103152017",
-              portal_url=_CERBERUS, portal_family="cerberus", username="osherad"),
-    ChainInfo(slug="dor-alon", name="Dor Alon", name_he="דור אלון", chain_id="7290492000005",
-              portal_url=_CERBERUS, portal_family="cerberus", username="doralon",
-              sector="convenience"),
-    ChainInfo(slug="keshet-teamim", name="Keshet Teamim", name_he="קשת טעמים",
-              chain_id="7290785400000", portal_url=_CERBERUS, portal_family="cerberus",
-              username="Keshet"),
-    ChainInfo(slug="super-cofix", name="Super Cofix", name_he="סופר קופיקס",
-              chain_id="7291056200008", portal_url=_CERBERUS, portal_family="cerberus",
-              username="SuperCofixApp", sector="convenience"),
-    ChainInfo(slug="politzer", name="Politzer", name_he="פוליצר", chain_id="7291059100008",
-              portal_url=_CERBERUS, portal_family="cerberus", username="politzer"),
-    ChainInfo(slug="stop-market", name="Stop Market", name_he="סטופ מרקט",
-              chain_id="7290639000004", portal_url=_CERBERUS, portal_family="cerberus",
-              username="Stop_Market"),
-    ChainInfo(slug="fresh-market", name="Fresh Market", name_he="פרש מרקט",
-              chain_id="7290876100000", portal_url=_CERBERUS, portal_family="cerberus",
-              username="freshmarket"),
-    ChainInfo(slug="salach-dabach", name="Salach Dabach", name_he="סאלח דבאח",
-              chain_id="7290526500006", portal_url=_CERBERUS, portal_family="cerberus",
-              username="SalachD"),
-    ChainInfo(slug="super-yuda", name="Super Yuda", name_he="סופר יודה",
-              chain_id="7290058177776", portal_url=_CERBERUS, portal_family="cerberus",
-              username="yuda_ho"),
-    ChainInfo(slug="yellow", name="Yellow", name_he="ילו", chain_id="7290644700005",
-              portal_url=_CERBERUS, portal_family="cerberus", username="Paz_bo",
-              sector="convenience"),
+    # --- Cerberus shared portal (13 chains, one adapter) ---
+    *CERBERUS_CHAINS,
     # --- Bina portals, no auth ---
     ChainInfo(slug="good-pharm", name="Good Pharm", name_he="גוד פארם",
               chain_id="7290058197699", portal_url=_bina("goodpharm"),

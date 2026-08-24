@@ -84,6 +84,36 @@ def test_superpharm_stores():
     assert f.stores[0].name == "סופר-פארם בן-גוריון"
 
 
+def test_ramilevy_stores_utf16():
+    # Rami Levy publishes its stores file as bare UTF-16 XML
+    f = load("ramilevy_stores.xml")
+    assert isinstance(f, StoresFile)
+    assert f.chain_id == "7290058140886"
+    assert f.chain_name == "רמי לוי שיווק השקמה"
+    assert f.stores[0].store_id == "001"
+    assert f.stores[0].name == "תלפיות"
+
+
+def test_ramilevy_pricefull():
+    f = load("ramilevy_pricefull.xml")
+    assert isinstance(f, PriceFile)
+    assert f.chain_id == "7290058140886"
+    assert f.store_id == "732"
+    item = f.items[0]
+    assert item.item_code == "8719326034096"
+    assert item.price == Decimal("14.40")
+    # "לא ידוע" (unknown) in a numeric field is coerced to None, not an error
+    assert item.qty_in_package is None
+
+
+def test_ramilevy_promofull():
+    f = load("ramilevy_promofull.xml")
+    assert isinstance(f, PromoFile)
+    promo = f.promotions[0]
+    assert promo.promotion_id == "0001421409"
+    assert promo.items and promo.items[0].reward_type == 10
+
+
 def test_parse_rejects_garbage():
     from israeli_prices import ParseError
 

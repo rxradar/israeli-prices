@@ -1,0 +1,65 @@
+<Root>
+  <ChainID>7290058140886</ChainID>
+  <SubChainID>001</SubChainID>
+  <StoreID>732</StoreID>
+  <BikoretNo>7</BikoretNo>
+  <Items>
+    <Item>
+      <PriceUpdateTime>2026-08-23T06:56:41.000</PriceUpdateTime>
+      <ItemCode>8719326034096</ItemCode>
+      <LastSaleDateTime>2026-08-20T08:14:10.000</LastSaleDateTime>
+      <ItemType>1</ItemType>
+      <ItemName>תמר מג'הול 500 גרם</ItemName>
+      <ManufactureName>לא ידוע</ManufactureName>
+      <ManufactureCountry>לא ידוע</ManufactureCountry>
+      <ManufactureItemDescription>תמר מג'הול 500 גרם</ManufactureItemDescription>
+      <UnitQty>גרם</UnitQty>
+      <Quantity>500.00</Quantity>
+      <UnitOfMeasure>100 גרם</UnitOfMeasure>
+      <bIsWeighted>0</bIsWeighted>
+      <QtyInPackage>לא ידוע</QtyInPackage>
+      <ItemPrice>14.40</ItemPrice>
+      <UnitOfMeasurePrice>2.88</UnitOfMeasurePrice>
+      <AllowDiscount>1</AllowDiscount>
+      <ItemStatus />
+    </Item>
+    <Item>
+      <PriceUpdateTime>2026-01-01T14:54:42.000</PriceUpdateTime>
+      <ItemCode>7290002014225</ItemCode>
+      <LastSaleDateTime>2026-07-13T19:45:17.000</LastSaleDateTime>
+      <ItemType>1</ItemType>
+      <ItemName>חציל במיונז 200 גרם</ItemName>
+      <ManufactureName>מעדני מיקי</ManufactureName>
+      <ManufactureCountry>לא ידוע</ManufactureCountry>
+      <ManufactureItemDescription>חציל במיונז 200 גרם</ManufactureItemDescription>
+      <UnitQty>גרם</UnitQty>
+      <Quantity>200.00</Quantity>
+      <UnitOfMeasure>100 גרם</UnitOfMeasure>
+      <bIsWeighted>0</bIsWeighted>
+      <QtyInPackage>לא ידוע</QtyInPackage>
+      <ItemPrice>8.90</ItemPrice>
+      <UnitOfMeasurePrice>4.45</UnitOfMeasurePrice>
+      <AllowDiscount>1</AllowDiscount>
+      <ItemStatus />
+    </Item>
+    <Item>
+      <PriceUpdateTime>2026-04-16T06:50:11.000</PriceUpdateTime>
+      <ItemCode>7290002967941</ItemCode>
+      <LastSaleDateTime>2026-08-24T13:41:50.000</LastSaleDateTime>
+      <ItemType>1</ItemType>
+      <ItemName>חומוס עם פטריות 200ג</ItemName>
+      <ManufactureName>לא ידוע</ManufactureName>
+      <ManufactureCountry>לא ידוע</ManufactureCountry>
+      <ManufactureItemDescription>חומוס עם פטריות 200ג</ManufactureItemDescription>
+      <UnitQty>גרם</UnitQty>
+      <Quantity>200.00</Quantity>
+      <UnitOfMeasure>100 גרם</UnitOfMeasure>
+      <bIsWeighted>0</bIsWeighted>
+      <QtyInPackage>לא ידוע</QtyInPackage>
+      <ItemPrice>12.90</ItemPrice>
+      <UnitOfMeasurePrice>6.45</UnitOfMeasurePrice>
+      <AllowDiscount>1</AllowDiscount>
+      <ItemStatus />
+    </Item>
+    </Items>
+</Root>

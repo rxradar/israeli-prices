@@ -32,17 +32,22 @@ prices.to_df()               # optional pandas export
 
 ## Status
 
-Early days (v0). Implemented adapters:
+Early days, moving fast. **15 of 32 chains implemented**, all verified
+live end to end:
 
-| Chain | Slug | Files |
-|---|---|---|
-| Shufersal (incl. Be Pharm) | `shufersal` | Price, PriceFull, Promo, PromoFull, Stores |
-| Super-Pharm | `super-pharm` | Price, PriceFull, Promo, PromoFull, Stores |
+- **Self-hosted portals**: Shufersal (incl. the Be Pharm sub-chain),
+  Super-Pharm.
+- **Cerberus shared portal** (one adapter, 13 chains): Rami Levy,
+  Tiv Taam, Yochananof, Osher Ad, Dor Alon, Keshet Teamim, Super Cofix,
+  Politzer, Stop Market, Fresh Market, Salach Dabach, Super Yuda,
+  Yellow.
 
-`list_chains()` already registers the full gov.il roster (~30 chains across
-5 portal families — self-hosted, Cerberus, Bina, Matrix, one-offs); adapters
-for the remaining chains are being added. Calling an unimplemented chain
-raises `ChainNotFound` with the portal URL so you are never stuck.
+`list_chains()` already registers the full gov.il roster (32 chains
+across 5 portal families); adapters for the remaining chains (Bina,
+Laib, one-offs) are being added. Calling an unimplemented chain raises
+`ChainNotFound` with the portal URL so you are never stuck.
+
+See [docs/chains.md](docs/chains.md) for the full coverage matrix.
 
 ## Install
 

@@ -35,19 +35,27 @@ class HttpClient:
         )
 
     def get(self, url: str, params: dict | None = None) -> httpx.Response:
+        return self._request("GET", url, params=params)
+
+    def post(self, url: str, data: dict | None = None) -> httpx.Response:
+        return self._request("POST", url, data=data)
+
+    def _request(self, method: str, url: str, **kwargs) -> httpx.Response:
         last_exc: Exception | None = None
         for attempt in range(self.retries):
             try:
-                resp = self._client.get(url, params=params)
+                resp = self._client.request(method, url, **kwargs)
                 if resp.status_code >= 500:
-                    raise PortalError(f"GET {url} -> HTTP {resp.status_code}")
+                    raise PortalError(f"{method} {url} -> HTTP {resp.status_code}")
                 resp.raise_for_status()
                 return resp
             except (httpx.HTTPError, PortalError) as exc:
                 last_exc = exc
                 if attempt < self.retries - 1:
                     time.sleep(2**attempt)
-        raise PortalError(f"GET {url} failed after {self.retries} attempts: {last_exc}")
+        raise PortalError(
+            f"{method} {url} failed after {self.retries} attempts: {last_exc}"
+        )
 
     def close(self) -> None:
         self._client.close()

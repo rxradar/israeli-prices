@@ -20,25 +20,32 @@ The Be Pharm drugstore chain publishes inside the Shufersal feed as
 sub-chain 5 — filter the stores file on `sub_chain_id == "5"`, then
 fetch those stores' price files.
 
-## Cerberus shared portal (url.retail.publishedprices.co.il, login form)
+## Cerberus shared portal (url.publishedprices.co.il, login form)
 
-One adapter will unlock all of these; usernames per gov.il.
+One adapter covers all 13. Usernames (and the three non-empty
+passwords) are published on gov.il.
 
 | Chain | Slug | Username | Status |
 |---|---|---|---|
-| Rami Levy | `rami-levy` | RamiLevi | 🔜 |
-| Tiv Taam | `tiv-taam` | TivTaam | 🔜 |
-| Yochananof | `yochananof` | yohananof | 🔜 |
-| Osher Ad | `osher-ad` | osherad | 🔜 |
-| Dor Alon | `dor-alon` | doralon | 🔜 |
-| Keshet Teamim | `keshet-teamim` | Keshet | 🔜 |
-| Super Cofix | `super-cofix` | SuperCofixApp | 🔜 |
-| Politzer | `politzer` | politzer | 🔜 |
-| Stop Market | `stop-market` | Stop_Market | 🔜 |
-| Fresh Market | `fresh-market` | freshmarket | 🔜 |
-| Salach Dabach | `salach-dabach` | SalachD | 🔜 |
-| Super Yuda | `super-yuda` | yuda_ho | 🔜 |
-| Yellow | `yellow` | Paz_bo | 🔜 |
+| Rami Levy | `rami-levy` | RamiLevi | ✅ |
+| Tiv Taam | `tiv-taam` | TivTaam | ✅ |
+| Yochananof | `yochananof` | yohananof | ✅ |
+| Osher Ad | `osher-ad` | osherad | ✅ |
+| Dor Alon | `dor-alon` | doralon | ✅ |
+| Keshet Teamim | `keshet-teamim` | Keshet | ✅ |
+| Super Cofix | `super-cofix` | SuperCofixApp | ✅ |
+| Politzer | `politzer` | politzer | ✅ |
+| Stop Market | `stop-market` | Stop_Market | ✅ |
+| Fresh Market | `fresh-market` | freshmarket | ✅ |
+| Salach Dabach | `salach-dabach` | SalachD | ✅ |
+| Super Yuda | `super-yuda` | yuda_ho | ✅ |
+| Yellow | `yellow` | Paz_bo | ✅ |
+
+Cerberus quirks handled by the adapter: CSRF login flow with ~30-minute
+session expiry (automatic re-login), `NULL*` placeholder files skipped,
+stray files from other chains filtered out by chain id, bare-.xml and
+UTF-16 stores files, Super Yuda's `/Yuda` subfolder, legacy 12-digit
+timestamps in file names.
 
 ## Bina portals ({prefix}.binaprojects.com, no auth)
 
