@@ -99,6 +99,14 @@ retailer — has essentially no other web presence, so there is no
 alternative endpoint to fall back to. The chain stays registered and
 will be enabled when the portal comes back.
 
+## Geo-restriction
+
+Observed from a non-Israeli runner (2026-08-24): **Super-Pharm** (serves
+an empty listing), **Hatzi Hinam** (403) and the **laibcatalog** chains
+(Victory, Mahsanei HaShuk, Het Cohen — connection dropped) only answer
+Israeli IPs. From abroad, pass `HttpClient(proxy=...)` with Israeli
+egress for those five; the other 26 chains work worldwide.
+
 ## File types
 
 Every chain publishes five categories, gzipped XML. Cadence is set by

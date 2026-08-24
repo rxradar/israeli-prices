@@ -19,6 +19,10 @@ jobs:
           python-version: "3.12"
       - run: pip install -e .
       - run: python scripts/health_check.py
+        env:
+          # optional Israeli egress for the geo-restricted portals;
+          # without it those chains report "down" instead of "geo-blocked"
+          IL_PROXY: ${{ secrets.IL_PROXY }}
       - name: Commit health report
         run: |
           git config user.name "github-actions[bot]"

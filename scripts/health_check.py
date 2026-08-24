@@ -4,12 +4,20 @@ Fetches and parses the latest Stores / PriceFull / PromoFull file of
 every implemented chain, probes the portals of unimplemented ones, and
 writes docs/health.json, docs/health.md and the shields.io badge JSON.
 
+Some portals only answer Israeli IPs (observed 2026-08-24: Super-Pharm
+serves an empty listing, Hatzi Hinam answers 403, laibcatalog drops the
+connection). When the optional ``IL_PROXY`` env var is set (an
+httpx-compatible proxy URL with Israeli egress), chains that fail the
+direct check are retried through it and reported as ``geo-blocked``
+(working, but only from Israel) instead of ``down``.
+
 Run from anywhere: python scripts/health_check.py
 """
 
 from __future__ import annotations
 
 import json
+import os
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -19,6 +27,7 @@ from israeli_prices import FileType
 from israeli_prices.core.http import HttpClient
 
 DOCS = Path(__file__).resolve().parent.parent / "docs"
+IL_PROXY = os.environ.get("IL_PROXY")
 
 CHECKS = (
     (FileType.STORES, "stores", "stores"),
@@ -27,8 +36,9 @@ CHECKS = (
 )
 
 
-def check_chain(slug: str) -> dict:
-    adapter = ilp.get_adapter(slug)
+def check_chain(slug: str, proxy: str | None = None) -> dict:
+    client = HttpClient(proxy=proxy) if proxy else None
+    adapter = ilp.get_adapter(slug, client=client)
     result: dict = {"slug": slug}
     errors = []
     for file_type, key, attr in CHECKS:
@@ -44,6 +54,17 @@ def check_chain(slug: str) -> dict:
     if errors:
         result["note"] = " | ".join(errors)[:300]
     return result
+
+
+def check_chain_geo_aware(slug: str) -> dict:
+    result = check_chain(slug)
+    if result["status"] == "ok" or not IL_PROXY:
+        return result
+    retried = check_chain(slug, proxy=IL_PROXY)
+    if retried["status"] == "ok":
+        retried["status"] = "geo-blocked"
+        retried["note"] = "reachable from Israeli IPs only (verified via proxy)"
+    return retried
 
 
 def probe_portal(info) -> dict:
@@ -68,14 +89,14 @@ def main() -> None:
     rows = []
     for info in ilp.list_chains():
         print(f"checking {info.slug}...", file=sys.stderr, flush=True)
-        rows.append(check_chain(info.slug) if info.implemented else probe_portal(info))
+        rows.append(check_chain_geo_aware(info.slug) if info.implemented else probe_portal(info))
 
     total = len(rows)
-    ok = sum(1 for r in rows if r["status"] == "ok")
+    live = sum(1 for r in rows if r["status"] in ("ok", "geo-blocked"))
     color = (
-        "brightgreen" if ok == total
-        else "green" if ok >= total * 0.9
-        else "yellow" if ok >= total * 0.7
+        "brightgreen" if live == total
+        else "green" if live >= total * 0.9
+        else "yellow" if live >= total * 0.7
         else "red"
     )
 
@@ -85,12 +106,12 @@ def main() -> None:
     )
     DOCS.joinpath("health-badge.json").write_text(
         json.dumps(
-            {"schemaVersion": 1, "label": "chains live", "message": f"{ok}/{total}", "color": color}
+            {"schemaVersion": 1, "label": "chains live", "message": f"{live}/{total}", "color": color}
         )
         + "\n"
     )
 
-    icons = {"ok": "✅", "degraded": "⚠️", "down": "⛔", "attention": "👀"}
+    icons = {"ok": "✅", "degraded": "⚠️", "down": "⛔", "attention": "👀", "geo-blocked": "🌍"}
     lines = [
         "# Chain health",
         "",
@@ -110,7 +131,7 @@ def main() -> None:
             f"| {r.get('note', '')} |"
         )
     DOCS.joinpath("health.md").write_text("\n".join(lines) + "\n")
-    print(f"done: {ok}/{total} chains ok", file=sys.stderr)
+    print(f"done: {live}/{total} chains live", file=sys.stderr)
 
 
 if __name__ == "__main__":
