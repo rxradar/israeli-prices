@@ -12,7 +12,7 @@ market venues, not physical branches.
 from __future__ import annotations
 
 import re
-from typing import Iterator
+from collections.abc import Iterator
 
 from ..models import ChainInfo, FileRef, FileType
 from .base import ChainAdapter, parse_filename, same_store

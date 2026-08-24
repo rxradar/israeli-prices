@@ -1,0 +1,28 @@
+name: nightly-health
+
+on:
+  schedule:
+    - cron: "30 4 * * *"  # 04:30 UTC = 07:30 IL, after the daily full files land
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e .
+      - run: python scripts/health_check.py
+      - name: Commit health report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/health.json docs/health.md docs/health-badge.json
+          git diff --cached --quiet || git commit -m "health: nightly check [skip ci]"
+          git push

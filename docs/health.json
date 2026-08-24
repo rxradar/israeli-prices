@@ -1,0 +1,227 @@
+{
+  "checked_at": "2026-08-24T15:51:06+00:00",
+  "chains": [
+    {
+      "slug": "shufersal",
+      "stores": 417,
+      "prices": 6558,
+      "promos": 1,
+      "status": "ok"
+    },
+    {
+      "slug": "super-pharm",
+      "stores": 306,
+      "prices": 8735,
+      "promos": 924,
+      "status": "ok"
+    },
+    {
+      "slug": "wolt",
+      "stores": 34,
+      "prices": 0,
+      "promos": 945,
+      "status": "ok"
+    },
+    {
+      "slug": "carrefour",
+      "stores": 147,
+      "prices": 11188,
+      "promos": 2310,
+      "status": "ok"
+    },
+    {
+      "slug": "hatzi-hinam",
+      "stores": 13,
+      "prices": 597,
+      "promos": 768,
+      "status": "ok"
+    },
+    {
+      "slug": "rami-levy",
+      "stores": 99,
+      "prices": 13766,
+      "promos": 2727,
+      "status": "ok"
+    },
+    {
+      "slug": "tiv-taam",
+      "stores": 54,
+      "prices": 119,
+      "promos": 1947,
+      "status": "ok"
+    },
+    {
+      "slug": "yochananof",
+      "stores": 51,
+      "prices": 10824,
+      "promos": 2692,
+      "status": "ok"
+    },
+    {
+      "slug": "osher-ad",
+      "stores": 24,
+      "prices": 6585,
+      "promos": 857,
+      "status": "ok"
+    },
+    {
+      "slug": "dor-alon",
+      "stores": 156,
+      "prices": 1270,
+      "promos": 326,
+      "status": "ok"
+    },
+    {
+      "slug": "keshet-teamim",
+      "stores": 27,
+      "prices": 2582,
+      "promos": 80,
+      "status": "ok"
+    },
+    {
+      "slug": "super-cofix",
+      "stores": 34,
+      "prices": 2352,
+      "promos": 1068,
+      "status": "ok"
+    },
+    {
+      "slug": "politzer",
+      "stores": 8,
+      "prices": 12202,
+      "promos": 1474,
+      "status": "ok"
+    },
+    {
+      "slug": "stop-market",
+      "stores": 11,
+      "prices": 17458,
+      "promos": 3582,
+      "status": "ok"
+    },
+    {
+      "slug": "fresh-market",
+      "stores": 47,
+      "prices": 8412,
+      "promos": 697,
+      "status": "ok"
+    },
+    {
+      "slug": "salach-dabach",
+      "stores": 10,
+      "prices": 13283,
+      "promos": 2053,
+      "status": "ok"
+    },
+    {
+      "slug": "super-yuda",
+      "stores": 26,
+      "prices": 31523,
+      "promos": 0,
+      "status": "ok"
+    },
+    {
+      "slug": "yellow",
+      "stores": 242,
+      "prices": 1825,
+      "promos": 672,
+      "status": "ok"
+    },
+    {
+      "slug": "good-pharm",
+      "stores": 82,
+      "prices": 3448,
+      "promos": 652,
+      "status": "ok"
+    },
+    {
+      "slug": "super-bareket",
+      "stores": 14,
+      "prices": 6886,
+      "promos": 1460,
+      "status": "ok"
+    },
+    {
+      "slug": "king-store",
+      "stores": 29,
+      "prices": 2324,
+      "promos": 300,
+      "status": "ok"
+    },
+    {
+      "slug": "maayan-2000",
+      "stores": 38,
+      "prices": 2602,
+      "promos": 376,
+      "status": "ok"
+    },
+    {
+      "slug": "meshnat-yosef",
+      "stores": 4,
+      "prices": 5470,
+      "promos": 265,
+      "status": "ok"
+    },
+    {
+      "slug": "shefa-birkat-hashem",
+      "stores": 22,
+      "prices": 3589,
+      "promos": 630,
+      "status": "ok"
+    },
+    {
+      "slug": "shuk-hayir",
+      "stores": 26,
+      "prices": 1643,
+      "promos": 0,
+      "status": "ok"
+    },
+    {
+      "slug": "super-sapir",
+      "stores": 68,
+      "prices": 3453,
+      "promos": 0,
+      "status": "ok"
+    },
+    {
+      "slug": "zol-vebegadol",
+      "stores": 35,
+      "prices": 3812,
+      "promos": 1173,
+      "status": "ok"
+    },
+    {
+      "slug": "city-market",
+      "stores": 28,
+      "prices": 2891,
+      "promos": 323,
+      "status": "ok"
+    },
+    {
+      "slug": "victory",
+      "stores": 70,
+      "prices": 10140,
+      "promos": 5262,
+      "status": "ok"
+    },
+    {
+      "slug": "mahsanei-hashuk",
+      "stores": 71,
+      "prices": 12475,
+      "promos": 7244,
+      "status": "ok"
+    },
+    {
+      "slug": "het-cohen",
+      "stores": 5,
+      "prices": 8896,
+      "promos": 3192,
+      "status": "ok"
+    },
+    {
+      "slug": "nativ-hahesed",
+      "status": "down",
+      "note": "portal still unreachable (PortalError)"
+    }
+  ]
+}

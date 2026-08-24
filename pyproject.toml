@@ -39,7 +39,7 @@ dependencies = [
 
 [project.optional-dependencies]
 pandas = ["pandas>=2.0"]
-dev = ["pytest>=8"]
+dev = ["pytest>=8", "ruff>=0.5"]
 
 [project.urls]
 Homepage = "https://github.com/rxradar/israeli-prices"
@@ -47,3 +47,8 @@ Issues = "https://github.com/rxradar/israeli-prices/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/israeli_prices"]
+
+[tool.ruff.lint]
+# naive datetimes are intentional: the transparency files publish naive
+# local-Israel timestamps, and we preserve them as-is (no DTZ rules)
+select = ["E4", "E7", "E9", "F", "I", "UP"]

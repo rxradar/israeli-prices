@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import json
 import re
-from typing import Iterator
+from collections.abc import Iterator
 from urllib.parse import quote
 
 from ..exceptions import PortalError

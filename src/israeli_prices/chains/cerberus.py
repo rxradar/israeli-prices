@@ -27,7 +27,7 @@ Super Yuda publishes everything under a /Yuda subfolder.
 from __future__ import annotations
 
 import re
-from typing import Iterator
+from collections.abc import Iterator
 from urllib.parse import quote
 
 from ..core.http import HttpClient

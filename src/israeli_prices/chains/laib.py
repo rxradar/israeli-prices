@@ -10,7 +10,7 @@ matrixcatalog.co.il host is defunct):
 
 from __future__ import annotations
 
-from typing import Iterator
+from collections.abc import Iterator
 from urllib.parse import quote
 
 from ..core.http import HttpClient

@@ -21,8 +21,8 @@ timestamp style with the standard one, and some chains uppercase the
 
 from __future__ import annotations
 
+from collections.abc import Iterator
 from datetime import datetime
-from typing import Iterator
 from urllib.parse import quote
 
 from ..core.http import HttpClient
