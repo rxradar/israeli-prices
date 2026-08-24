@@ -16,9 +16,12 @@ Status: ✅ adapter implemented · 🔜 registered, adapter planned.
 | Hatzi Hinam | `hatzi-hinam` | supermarket | shop.hazi-hinam.co.il/Prices | ✅ |
 | Carrefour Israel | `carrefour` | supermarket | prices.carrefour.co.il | ✅ |
 
-Wolt is an online-only aggregator: its "stores" are virtual market
-venues, and some venues publish legitimately empty price files.
-Carrefour's portal lists the current day only.
+Wolt's feed covers only **Wolt Market**, its own dark-store venues
+(~34 across the country) — the thousands of partner supermarkets,
+pharmacies and restaurants selling on the Wolt platform are NOT in the
+government feed. Its "stores" are virtual venues, and some publish
+legitimately empty price files. Carrefour's portal lists the current
+day only.
 
 The Be Pharm drugstore chain publishes inside the Shufersal feed as
 sub-chain 5 — filter the stores file on `sub_chain_id == "5"`, then
@@ -89,6 +92,12 @@ One adapter covers all 3, through the JSON API
 | Chain | Slug | Status |
 |---|---|---|
 | Nativ HaHesed | `nativ-hahesed` | ⛔ portal down (HTTP 500 on every path, 2026-08-24) |
+
+Nativ HaHesed's portal (a bare-IP IIS host) has been returning HTTP 500
+since at least July 2026; the chain — a ~90-branch haredi-sector
+retailer — has essentially no other web presence, so there is no
+alternative endpoint to fall back to. The chain stays registered and
+will be enabled when the portal comes back.
 
 ## File types
 

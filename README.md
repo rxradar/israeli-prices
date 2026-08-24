@@ -85,6 +85,10 @@ IPs; pass a proxy via `HttpClient(proxy=...)` if you fetch from abroad.
   are handled transparently.
 - Freshness: chains publish incremental `Price`/`Promo` files throughout
   the day and daily `PriceFull`/`PromoFull` snapshots per store.
+- Scope: the law covers each retailer's own sales only — e.g. Wolt's
+  feed contains Wolt Market (its dark stores), not the partner
+  retailers on the Wolt platform. Per-chain caveats live in
+  [docs/chains.md](docs/chains.md).
 
 ## License
 

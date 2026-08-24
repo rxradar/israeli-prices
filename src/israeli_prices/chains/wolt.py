@@ -1,7 +1,9 @@
 """Wolt Market adapter (wm-gateway.wolt.com/isr-prices).
 
 Wolt is an online-only aggregator covered by the law through the online
-sales threshold. It publishes a static index of daily pages
+sales threshold. Its feed covers only Wolt Market — Wolt's own
+dark-store venues — not the partner retailers selling on the Wolt
+platform. It publishes a static index of daily pages
 (``v1/YYYY-MM-DD.html``), each a plain link list to that day's files
 (``download/YYYY-MM-DD/<name>``). "Stores" here are Wolt's virtual
 market venues, not physical branches.
