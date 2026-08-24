@@ -15,44 +15,42 @@ from ..exceptions import ChainNotFound
 from ..models import ChainInfo
 from .base import ChainAdapter
 from .bina import BINA_CHAINS, make_bina_adapter
+from .carrefour import CarrefourAdapter
 from .cerberus import CERBERUS_CHAINS, make_cerberus_adapter
+from .hazihinam import HaziHinamAdapter
+from .laib import LAIB_CHAINS, make_laib_adapter
 from .shufersal import ShufersalAdapter
 from .superpharm import SuperPharmAdapter
+from .wolt import WoltAdapter
 
 _ADAPTERS: dict = {
     "shufersal": ShufersalAdapter,
     "super-pharm": SuperPharmAdapter,
+    "wolt": WoltAdapter,
+    "carrefour": CarrefourAdapter,
+    "hatzi-hinam": HaziHinamAdapter,
     **{c.slug: partial(make_cerberus_adapter, c.slug) for c in CERBERUS_CHAINS},
     **{c.slug: partial(make_bina_adapter, c.slug) for c in BINA_CHAINS},
+    **{c.slug: partial(make_laib_adapter, c.slug) for c in LAIB_CHAINS},
 }
 
 
 CHAINS: list[ChainInfo] = [
+    # --- self-hosted portals (one adapter each) ---
     ShufersalAdapter.info,
     SuperPharmAdapter.info,
-    # --- self-hosted portals, no auth ---
-    ChainInfo(slug="wolt", name="Wolt Market", name_he="וולט", chain_id="7290058249350",
-              portal_url="https://wm-gateway.wolt.com/isr-prices/public/v1/index.html",
-              portal_family="self-hosted", sector="delivery"),
-    ChainInfo(slug="hatzi-hinam", name="Hatzi Hinam", name_he="חצי חינם", chain_id="7290700100008",
-              portal_url="https://shop.hazi-hinam.co.il/Prices", portal_family="self-hosted"),
-    ChainInfo(slug="carrefour", name="Carrefour Israel", name_he="קרפור", chain_id="7290055700007",
-              portal_url="https://prices.carrefour.co.il", portal_family="self-hosted"),
+    WoltAdapter.info,
+    CarrefourAdapter.info,
+    HaziHinamAdapter.info,
     # --- Cerberus shared portal (13 chains, one adapter) ---
     *CERBERUS_CHAINS,
     # --- Bina portals (10 chains, one adapter) ---
     *BINA_CHAINS,
-    # --- Laib catalog (ex-Matrix; matrixcatalog.co.il is defunct) ---
-    ChainInfo(slug="victory", name="Victory", name_he="ויקטורי", chain_id="7290696200003",
-              portal_url="https://laibcatalog.co.il/victory/index.html",
-              portal_family="laib"),
-    ChainInfo(slug="mahsanei-hashuk", name="Mahsanei HaShuk", name_he="מחסני השוק",
-              chain_id="7290661400001", portal_url="https://laibcatalog.co.il/mshuk/index.html",
-              portal_family="laib"),
-    ChainInfo(slug="het-cohen", name="Het Cohen", name_he="ח. כהן", chain_id="7290455000004",
-              portal_url="https://laibcatalog.co.il/hcohen/index.html",
-              portal_family="laib"),
-    # --- one-off endpoints ---
+    # --- Laib catalog (3 chains, one adapter) ---
+    *LAIB_CHAINS,
+    # Nativ HaHesed's portal (a bare-IP IIS host) answered HTTP 500 on
+    # every path when this registry was built (2026-08-24) — registered
+    # but not implemented until the portal comes back.
     ChainInfo(slug="nativ-hahesed", name="Nativ HaHesed", name_he="נתיב החסד",
               chain_id="7290058160839", portal_url="http://141.226.203.152",
               portal_family="webbase"),

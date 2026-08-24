@@ -12,9 +12,13 @@ Status: ✅ adapter implemented · 🔜 registered, adapter planned.
 |---|---|---|---|---|
 | Shufersal (incl. Be Pharm) | `shufersal` | supermarket | prices.shufersal.co.il | ✅ |
 | Super-Pharm | `super-pharm` | pharmacy | prices.super-pharm.co.il | ✅ |
-| Wolt Market | `wolt` | delivery | wm-gateway.wolt.com/isr-prices | 🔜 |
-| Hatzi Hinam | `hatzi-hinam` | supermarket | shop.hazi-hinam.co.il/Prices | 🔜 |
-| Carrefour Israel | `carrefour` | supermarket | prices.carrefour.co.il | 🔜 |
+| Wolt Market | `wolt` | delivery | wm-gateway.wolt.com/isr-prices | ✅ |
+| Hatzi Hinam | `hatzi-hinam` | supermarket | shop.hazi-hinam.co.il/Prices | ✅ |
+| Carrefour Israel | `carrefour` | supermarket | prices.carrefour.co.il | ✅ |
+
+Wolt is an online-only aggregator: its "stores" are virtual market
+venues, and some venues publish legitimately empty price files.
+Carrefour's portal lists the current day only.
 
 The Be Pharm drugstore chain publishes inside the Shufersal feed as
 sub-chain 5 — filter the stores file on `sub_chain_id == "5"`, then
@@ -71,17 +75,20 @@ chains publish legitimately empty PromoFull files.
 
 ## Laib catalog (laibcatalog.co.il — the former matrixcatalog.co.il is defunct)
 
+One adapter covers all 3, through the JSON API
+(`/webapi/api/getfiles?edi=<chain_id>`).
+
 | Chain | Slug | Status |
 |---|---|---|
-| Victory | `victory` | 🔜 |
-| Mahsanei HaShuk | `mahsanei-hashuk` | 🔜 |
-| Het Cohen | `het-cohen` | 🔜 |
+| Victory | `victory` | ✅ |
+| Mahsanei HaShuk | `mahsanei-hashuk` | ✅ |
+| Het Cohen | `het-cohen` | ✅ |
 
 ## One-off endpoints
 
 | Chain | Slug | Status |
 |---|---|---|
-| Nativ HaHesed | `nativ-hahesed` | 🔜 |
+| Nativ HaHesed | `nativ-hahesed` | ⛔ portal down (HTTP 500 on every path, 2026-08-24) |
 
 ## File types
 
