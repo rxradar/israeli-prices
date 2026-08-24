@@ -129,6 +129,23 @@ def _dt(value: str | None) -> datetime | None:
     return None
 
 
+def _dt_pair(fields: dict, dt_alias: str, date_alias: str, hour_alias: str) -> datetime | None:
+    """Timestamp from a single datetime field, or from the split
+    date + hour fields used by the flat promotion dialect."""
+    value = _pick(fields, dt_alias)
+    if value:
+        return _dt(value)
+    date = _pick(fields, date_alias)
+    if not date:
+        return None
+    hour = _pick(fields, hour_alias)
+    if hour:
+        combined = _dt(f"{date} {hour}")
+        if combined:
+            return combined
+    return _dt(date)
+
+
 # ---------------------------------------------------------------------------
 # file-level parsers
 
@@ -255,8 +272,12 @@ def _parse_promos(root: ET.Element) -> PromoFile:
                 promotion_id=promo_id,
                 description=_pick(f, "promotiondescription"),
                 update_time=_dt(_pick(f, "promotionupdatetime", "promotionupdatedate")),
-                start_time=_dt(_pick(f, "promotionstartdatetime", "promotionstartdate")),
-                end_time=_dt(_pick(f, "promotionenddatetime", "promotionenddate")),
+                start_time=_dt_pair(
+                    f, "promotionstartdatetime", "promotionstartdate", "promotionstarthour"
+                ),
+                end_time=_dt_pair(
+                    f, "promotionenddatetime", "promotionenddate", "promotionendhour"
+                ),
                 allow_multiple_discounts=_bool(_pick(f, "allowmultiplediscounts")),
                 min_items_offered=_decimal(_pick(f, "minnoofitemoffered", "minnoofitemofered")),
                 club_id=_pick(f, "clubid"),

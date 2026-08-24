@@ -1,5 +1,6 @@
 """Parse tests on trimmed real-world fixtures (captured 2026-08-24)."""
 
+from datetime import datetime
 from decimal import Decimal
 from pathlib import Path
 
@@ -112,6 +113,55 @@ def test_ramilevy_promofull():
     promo = f.promotions[0]
     assert promo.promotion_id == "0001421409"
     assert promo.items and promo.items[0].reward_type == 10
+
+
+def test_goodpharm_promofull_flat_dialect():
+    # Bina chains use the flat dialect: reward fields sit on the
+    # promotion, items carry only code/type/gift flag
+    f = load("goodpharm_promofull.xml")
+    assert isinstance(f, PromoFile)
+    assert f.chain_id == "7290058197699"
+    promo = f.promotions[0]
+    assert promo.promotion_id == "26285"
+    assert promo.reward_type == 1
+    assert promo.discounted_price == Decimal("69.9")
+    # split date + hour fields are combined into one timestamp
+    assert promo.start_time == datetime(2026, 8, 24, 0, 0, 0)
+    assert promo.end_time == datetime(2026, 9, 11, 23, 59, 0)
+    assert promo.items[0].item_code == "7297529246436"
+    assert promo.items[0].is_gift_item is False
+    assert promo.items[0].group_id is None
+
+
+def test_goodpharm_pricefull():
+    f = load("goodpharm_pricefull.xml")
+    assert isinstance(f, PriceFile)
+    assert f.chain_id == "7290058197699"
+    item = f.items[0]
+    assert item.name == "GOOD PHARM - שקית אל בד גדול"
+    assert item.price == Decimal("2.5")
+    assert item.price_update_time == datetime(2026, 8, 24, 10, 52)
+
+
+def test_goodpharm_stores():
+    f = load("goodpharm_stores.xml")
+    assert isinstance(f, StoresFile)
+    assert f.stores[0].store_id == "48"
+    assert f.stores[0].city == "נס ציונה"
+
+
+def test_zip_disguised_as_gz():
+    # some Bina portals serve ZIP archives under a .gz name
+    import io
+    import zipfile
+
+    xml = (FIXTURES / "goodpharm_stores.xml").read_bytes()
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w") as zf:
+        zf.writestr("Stores.xml", xml)
+    f = parse(buf.getvalue())
+    assert isinstance(f, StoresFile)
+    assert f.chain_id == "7290058197699"
 
 
 def test_parse_rejects_garbage():

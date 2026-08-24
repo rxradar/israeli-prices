@@ -1,0 +1,62 @@
+<Root>
+  <ChainId>7290058197699</ChainId>
+  <SubChainId>1</SubChainId>
+  <StoreId>970</StoreId>
+  <BikoretNo>1</BikoretNo>
+  <Items>
+    <Item>
+      <PriceUpdateDate>2026-08-24 10:52:00</PriceUpdateDate>
+      <ItemCode>1</ItemCode>
+      <ItemType>1</ItemType>
+      <ItemNm>GOOD PHARM - שקית אל בד גדול</ItemNm>
+      <ManufacturerName>לא ידוע</ManufacturerName>
+      <ManufactureCountry>לא ידוע</ManufactureCountry>
+      <ManufacturerItemDescription>GOOD PHARM - שקית אל בד גדול</ManufacturerItemDescription>
+      <UnitQty>יח'</UnitQty>
+      <Quantity>1</Quantity>
+      <UnitOfMeasure>1 יח'  </UnitOfMeasure>
+      <bIsWeighted>0</bIsWeighted>
+      <QtyInPackage>200.0000</QtyInPackage>
+      <ItemPrice>2.5</ItemPrice>
+      <UnitOfMeasurePrice>2.5000</UnitOfMeasurePrice>
+      <AllowDiscount>1</AllowDiscount>
+      <ItemStatus>1</ItemStatus>
+    </Item>
+    <Item>
+      <PriceUpdateDate>2026-08-24 10:31:00</PriceUpdateDate>
+      <ItemCode>70</ItemCode>
+      <ItemType>1</ItemType>
+      <ItemNm>דפי בישום גודל 11/2 ס"מ פרוצס דו"צ</ItemNm>
+      <ManufacturerName>לא ידוע</ManufacturerName>
+      <ManufactureCountry>לא ידוע</ManufactureCountry>
+      <ManufacturerItemDescription>דפי בישום גודל 11/2 ס"מ פרוצס דו"צ</ManufacturerItemDescription>
+      <UnitQty>יח'</UnitQty>
+      <Quantity>500</Quantity>
+      <UnitOfMeasure>1 יח'  </UnitOfMeasure>
+      <bIsWeighted>0</bIsWeighted>
+      <QtyInPackage>1.0000</QtyInPackage>
+      <ItemPrice>0.01</ItemPrice>
+      <UnitOfMeasurePrice>0.0100</UnitOfMeasurePrice>
+      <AllowDiscount>0</AllowDiscount>
+      <ItemStatus>1</ItemStatus>
+    </Item>
+    <Item>
+      <PriceUpdateDate>2026-08-24 10:31:00</PriceUpdateDate>
+      <ItemCode>1025</ItemCode>
+      <ItemType>1</ItemType>
+      <ItemNm>הנחת קופון האגיס ערכת הריון ולידה</ItemNm>
+      <ManufacturerName>לא ידוע</ManufacturerName>
+      <ManufactureCountry>לא ידוע</ManufactureCountry>
+      <ManufacturerItemDescription>הנחת קופון האגיס ערכת הריון ולידה</ManufacturerItemDescription>
+      <UnitQty>יח'</UnitQty>
+      <Quantity>1</Quantity>
+      <UnitOfMeasure>1 יח'  </UnitOfMeasure>
+      <bIsWeighted>0</bIsWeighted>
+      <QtyInPackage>27.0000</QtyInPackage>
+      <ItemPrice>0.01</ItemPrice>
+      <UnitOfMeasurePrice>0.0100</UnitOfMeasurePrice>
+      <AllowDiscount>1</AllowDiscount>
+      <ItemStatus>1</ItemStatus>
+    </Item>
+    </Items>
+</Root>

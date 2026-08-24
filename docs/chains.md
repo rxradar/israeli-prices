@@ -49,18 +49,25 @@ timestamps in file names.
 
 ## Bina portals ({prefix}.binaprojects.com, no auth)
 
+One adapter covers all 10.
+
 | Chain | Slug | Sector | Status |
 |---|---|---|---|
-| Good Pharm | `good-pharm` | pharmacy | 🔜 |
-| Super Bareket | `super-bareket` | supermarket | 🔜 |
-| King Store | `king-store` | supermarket | 🔜 |
-| Maayan 2000 | `maayan-2000` | supermarket | 🔜 |
-| Meshnat Yosef | `meshnat-yosef` | supermarket | 🔜 |
-| Shefa Birkat Hashem | `shefa-birkat-hashem` | supermarket | 🔜 |
-| Shuk Hayir | `shuk-hayir` | supermarket | 🔜 |
-| Super Sapir | `super-sapir` | supermarket | 🔜 |
-| Zol VeBegadol | `zol-vebegadol` | supermarket | 🔜 |
-| City Market | `city-market` | supermarket | 🔜 |
+| Good Pharm | `good-pharm` | pharmacy | ✅ |
+| Super Bareket | `super-bareket` | supermarket | ✅ |
+| King Store | `king-store` | supermarket | ✅ |
+| Maayan 2000 | `maayan-2000` | supermarket | ✅ |
+| Meshnat Yosef | `meshnat-yosef` | supermarket | ✅ |
+| Shefa Birkat Hashem | `shefa-birkat-hashem` | supermarket | ✅ |
+| Shuk Hayir | `shuk-hayir` | supermarket | ✅ |
+| Super Sapir | `super-sapir` | supermarket | ✅ |
+| Zol VeBegadol | `zol-vebegadol` | supermarket | ✅ |
+| City Market | `city-market` | supermarket | ✅ |
+
+Bina quirks handled by the adapter: JSON listing capped at 1000 rows
+covering the current day, ZIP archives served under .gz names, mixed
+legacy/standard file-name timestamps, uppercase .GZ extensions. Some
+chains publish legitimately empty PromoFull files.
 
 ## Laib catalog (laibcatalog.co.il — the former matrixcatalog.co.il is defunct)
 

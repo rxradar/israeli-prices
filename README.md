@@ -32,7 +32,7 @@ prices.to_df()               # optional pandas export
 
 ## Status
 
-Early days, moving fast. **15 of 32 chains implemented**, all verified
+Early days, moving fast. **25 of 32 chains implemented**, all verified
 live end to end:
 
 - **Self-hosted portals**: Shufersal (incl. the Be Pharm sub-chain),
@@ -41,10 +41,13 @@ live end to end:
   Tiv Taam, Yochananof, Osher Ad, Dor Alon, Keshet Teamim, Super Cofix,
   Politzer, Stop Market, Fresh Market, Salach Dabach, Super Yuda,
   Yellow.
+- **Bina portals** (one adapter, 10 chains): Good Pharm, Super Bareket,
+  King Store, Maayan 2000, Meshnat Yosef, Shefa Birkat Hashem,
+  Shuk Hayir, Super Sapir, Zol VeBegadol, City Market.
 
 `list_chains()` already registers the full gov.il roster (32 chains
-across 5 portal families); adapters for the remaining chains (Bina,
-Laib, one-offs) are being added. Calling an unimplemented chain raises
+across 5 portal families); adapters for the remaining chains (Laib,
+one-offs) are being added. Calling an unimplemented chain raises
 `ChainNotFound` with the portal URL so you are never stuck.
 
 See [docs/chains.md](docs/chains.md) for the full coverage matrix.

@@ -1,0 +1,32 @@
+<Root>
+  <ChainId>7290058197699</ChainId>
+  <ChainName>גוד פארם בע"מ</ChainName>
+  <LastUpdateDate>2026-08-24</LastUpdateDate>
+  <LastUpdateTime>13:00:12</LastUpdateTime>
+  <SubChains>
+    <SubChain>
+      <SubChainId>1</SubChainId>
+      <SubChainName>1</SubChainName>
+      <Stores>
+        <Store>
+          <StoreId>48</StoreId>
+          <BikoretNo>3</BikoretNo>
+          <StoreType>1</StoreType>
+          <StoreName>נס ציונה - הבנים</StoreName>
+          <Address>הבנים 1</Address>
+          <City>נס ציונה</City>
+          <ZipCode>7407101</ZipCode>
+        </Store>
+        <Store>
+          <StoreId>51</StoreId>
+          <BikoretNo>1</BikoretNo>
+          <StoreType>1</StoreType>
+          <StoreName>ת"א - כיכר רבין</StoreName>
+          <Address>בלוך 2</Address>
+          <City>תל אביב</City>
+          <ZipCode>6811112</ZipCode>
+        </Store>
+        </Stores>
+    </SubChain>
+  </SubChains>
+</Root>
