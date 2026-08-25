@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "israeli-prices"
-version = "0.1.0.dev0"
+version = "0.1.0"
 description = "Typed Python client for Israel's retail price-transparency data: prices, promotions and stores of every covered chain, fetched and parsed into pydantic models."
 readme = "README.md"
 requires-python = ">=3.10"
