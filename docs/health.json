@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-08-25T05:06:30+00:00",
+  "checked_at": "2026-08-25T12:56:56+00:00",
   "chains": [
     {
       "slug": "shufersal",
@@ -26,23 +26,23 @@
     {
       "slug": "carrefour",
       "stores": 147,
-      "prices": 11173,
-      "promos": 2325,
+      "prices": 11183,
+      "promos": 2332,
       "status": "ok"
     },
     {
       "slug": "hatzi-hinam",
       "stores": 13,
       "prices": 596,
-      "promos": 769,
+      "promos": 770,
       "status": "geo-blocked",
       "note": "reachable from Israeli IPs only (verified via proxy)"
     },
     {
       "slug": "rami-levy",
       "stores": 99,
-      "prices": 5229,
-      "promos": 1318,
+      "prices": 5235,
+      "promos": 1319,
       "status": "ok"
     },
     {
@@ -62,8 +62,8 @@
     {
       "slug": "osher-ad",
       "stores": 24,
-      "prices": 7020,
-      "promos": 896,
+      "prices": 6586,
+      "promos": 882,
       "status": "ok"
     },
     {
@@ -105,10 +105,10 @@
     {
       "slug": "fresh-market",
       "stores": null,
-      "prices": 11240,
-      "promos": 1495,
+      "prices": 8400,
+      "promos": 711,
       "status": "degraded",
-      "note": "stores: FileNotFound: fresh-market: no Stores file"
+      "note": "stores: ParseError: not valid XML: no element found: line 1, column 0"
     },
     {
       "slug": "salach-dabach",
@@ -134,15 +134,15 @@
     {
       "slug": "good-pharm",
       "stores": 82,
-      "prices": 3434,
+      "prices": 3444,
       "promos": 652,
       "status": "ok"
     },
     {
       "slug": "super-bareket",
       "stores": 14,
-      "prices": 6890,
-      "promos": 1485,
+      "prices": 6898,
+      "promos": 1486,
       "status": "ok"
     },
     {
@@ -190,22 +190,22 @@
     {
       "slug": "zol-vebegadol",
       "stores": 35,
-      "prices": 2873,
-      "promos": 1140,
+      "prices": 3806,
+      "promos": 1195,
       "status": "ok"
     },
     {
       "slug": "city-market",
       "stores": 28,
-      "prices": 2868,
-      "promos": 323,
+      "prices": 2873,
+      "promos": 322,
       "status": "ok"
     },
     {
       "slug": "victory",
       "stores": 70,
-      "prices": 10148,
-      "promos": 5358,
+      "prices": 8565,
+      "promos": 5363,
       "status": "geo-blocked",
       "note": "reachable from Israeli IPs only (verified via proxy)"
     },
