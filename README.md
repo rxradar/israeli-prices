@@ -2,7 +2,7 @@
 
 [![tests](https://github.com/rxradar/israeli-prices/actions/workflows/tests.yml/badge.svg)](https://github.com/rxradar/israeli-prices/actions/workflows/tests.yml)
 [![chains live](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Frxradar%2Fisraeli-prices%2Fmain%2Fdocs%2Fhealth-badge.json)](docs/health.md)
-[![PyPI](https://img.shields.io/pypi/v/israeli-prices)](https://pypi.org/project/israeli-prices/)
+[![PyPI](https://img.shields.io/pypi/v/israeli-prices?cacheSeconds=3600)](https://pypi.org/project/israeli-prices/)
 [![license: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 Typed Python client for Israel's retail **price-transparency data**.
