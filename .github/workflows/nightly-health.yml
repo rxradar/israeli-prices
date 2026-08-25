@@ -2,7 +2,10 @@ name: nightly-health
 
 on:
   schedule:
-    - cron: "30 4 * * *"  # 04:30 UTC = 07:30 IL, after the daily full files land
+    # 07:00 UTC = 10:00 IL — the law requires daily files "by store
+    # opening" (~09:00 IL); checking earlier catches late publishers
+    # mid-upload and reports false degradations
+    - cron: "0 7 * * *"
   workflow_dispatch:
 
 permissions:
