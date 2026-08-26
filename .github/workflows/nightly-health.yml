@@ -20,12 +20,26 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -e .
+      - run: pip install -e . boto3
+      - run: cp docs/health.json /tmp/prev-health.json
       - run: python scripts/health_check.py
         env:
           # optional Israeli egress for the geo-restricted portals;
           # without it those chains report "down" instead of "geo-blocked"
           IL_PROXY: ${{ secrets.IL_PROXY }}
+      - name: Alert on status changes
+        env:
+          ALERT_EMAIL: ${{ secrets.ALERT_EMAIL }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.SES_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.SES_AWS_SECRET_ACCESS_KEY }}
+        run: python scripts/health_alert.py /tmp/prev-health.json docs/health.json
+      - name: Alert on run failure
+        if: failure()
+        env:
+          ALERT_EMAIL: ${{ secrets.ALERT_EMAIL }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.SES_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.SES_AWS_SECRET_ACCESS_KEY }}
+        run: pip install boto3 && python scripts/health_alert.py --run-failed
       - name: Commit health report
         run: |
           git config user.name "github-actions[bot]"
