@@ -49,6 +49,12 @@ class HttpClient:
                     raise PortalError(f"{method} {url} -> HTTP {resp.status_code}")
                 resp.raise_for_status()
                 return resp
+            except httpx.HTTPStatusError as exc:
+                # 4xx client error (5xx is raised as PortalError above and
+                # retried): retrying will not change the outcome, so fail fast.
+                raise PortalError(
+                    f"{method} {url} -> HTTP {exc.response.status_code}"
+                ) from exc
             except (httpx.HTTPError, PortalError) as exc:
                 last_exc = exc
                 if attempt < self.retries - 1:
