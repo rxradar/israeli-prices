@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.1 — 2026-08-27
+
+- Parsing is now streamed element by element (`iterparse`), so a large
+  PriceFull snapshot no longer materializes a full DOM in memory
+  (~25% lower peak on a 20 MB store file). Behaviour is unchanged.
+- HTTP client fails fast on 4xx responses instead of retrying them;
+  5xx and transport errors are still retried with backoff.
+
 ## 0.1.0 — 2026-08-25
 
 Initial release.
