@@ -1,40 +1,40 @@
 # Chain health
 
-Last checked: 2026-08-26T07:48:25+00:00 (automated nightly run from a GitHub-hosted
-runner outside Israel; geo-blocked = the portal only answers Israeli
-IPs, verified through an Israeli proxy).
+**Coverage: 31/32 chains implemented** — the full government roster bar Nativ HaHesed, whose portal has returned HTTP 500 since July 2026 (it stays registered and will be enabled when it returns).
+
+**Last nightly check (2026-08-27T10:17:54+00:00): 29/32 reachable.** The check runs from a GitHub-hosted runner outside Israel and fetches every file type of every chain. Daily reachability fluctuates: chains sometimes publish empty or late files, and some small chains publish sporadically — that's the chains' portals, not the library. `geo-blocked` = the portal only answers Israeli IPs (verified through an Israeli proxy). `degraded` = some file types were missing/empty at check time.
 
 | Chain | Status | Stores | Prices | Promos | Note |
 |---|---|---|---|---|---|
-| `shufersal` | `ok` | 417 | 6530 | 1 |  |
-| `super-pharm` | `geo-blocked` | 306 | 8866 | 913 | reachable from Israeli IPs only (verified via proxy) |
-| `wolt` | `ok` | 34 | 6135 | 892 |  |
-| `carrefour` | `ok` | 147 | 11171 | 2312 |  |
-| `hatzi-hinam` | `geo-blocked` | 13 | 9622 | 823 | reachable from Israeli IPs only (verified via proxy) |
-| `rami-levy` | `ok` | 99 | 5224 | 1289 |  |
-| `tiv-taam` | `ok` | 54 | 119 | 2311 |  |
-| `yochananof` | `ok` | 51 | 7494 | 1321 |  |
-| `osher-ad` | `ok` | 24 | 6885 | 1012 |  |
-| `dor-alon` | `ok` | 156 | 1051 | 322 |  |
-| `keshet-teamim` | `ok` | 27 | 2579 | 87 |  |
+| `shufersal` | `ok` | 417 | 6543 | 1 |  |
+| `super-pharm` | `ok` | 306 | 8175 | 1018 |  |
+| `wolt` | `ok` | 34 | 5270 | 1019 |  |
+| `carrefour` | `ok` | 147 | 11183 | 2305 |  |
+| `hatzi-hinam` | `ok` | 13 | 595 | 774 |  |
+| `rami-levy` | `ok` | 99 | 14214 | 2743 |  |
+| `tiv-taam` | `ok` | 54 | 12815 | 2173 |  |
+| `yochananof` | `ok` | 51 | 6508 | 1688 |  |
+| `osher-ad` | `ok` | 24 | 6583 | 896 |  |
+| `dor-alon` | `ok` | 156 | 768 | 323 |  |
+| `keshet-teamim` | `ok` | 27 | 16051 | 2914 |  |
 | `super-cofix` | `degraded` | 34 | — | — | prices: FileNotFound: super-cofix: no PriceFull file | promos: FileNotFound: super-cofix: no PromoFull file |
-| `politzer` | `ok` | 8 | 14410 | 1476 |  |
-| `stop-market` | `ok` | 11 | 17467 | 3810 |  |
-| `fresh-market` | `degraded` | — | 2923 | 1426 | stores: ParseError: not valid XML: no element found: line 1, column 0 |
-| `salach-dabach` | `ok` | 10 | 16729 | 2081 |  |
-| `super-yuda` | `ok` | 26 | 31523 | 0 |  |
-| `yellow` | `ok` | 242 | 1912 | 640 |  |
-| `good-pharm` | `ok` | 82 | 3429 | 652 |  |
-| `super-bareket` | `ok` | 14 | 6886 | 1460 |  |
-| `king-store` | `ok` | 29 | 2312 | 298 |  |
-| `maayan-2000` | `ok` | 38 | 2540 | 393 |  |
-| `meshnat-yosef` | `ok` | 4 | 5486 | 289 |  |
-| `shefa-birkat-hashem` | `ok` | 22 | 3530 | 635 |  |
-| `shuk-hayir` | `ok` | 26 | 1564 | 0 |  |
-| `super-sapir` | `ok` | 68 | 3400 | 0 |  |
-| `zol-vebegadol` | `ok` | 35 | 3802 | 1181 |  |
-| `city-market` | `ok` | 28 | 2893 | 321 |  |
-| `victory` | `geo-blocked` | 70 | 8585 | 5280 | reachable from Israeli IPs only (verified via proxy) |
-| `mahsanei-hashuk` | `geo-blocked` | 71 | 12444 | 7368 | reachable from Israeli IPs only (verified via proxy) |
-| `het-cohen` | `geo-blocked` | 5 | 8893 | 3183 | reachable from Israeli IPs only (verified via proxy) |
+| `politzer` | `ok` | 8 | 12222 | 1487 |  |
+| `stop-market` | `ok` | 11 | 18199 | 3814 |  |
+| `fresh-market` | `degraded` | — | 8585 | 1553 | stores: ParseError: not valid XML: no element found: line 1, column 0 |
+| `salach-dabach` | `ok` | 10 | 13207 | 2072 |  |
+| `super-yuda` | `ok` | 26 | 6696 | 437 |  |
+| `yellow` | `ok` | 242 | 2874 | 645 |  |
+| `good-pharm` | `ok` | 82 | 3418 | 671 |  |
+| `super-bareket` | `ok` | 14 | 6833 | 1459 |  |
+| `king-store` | `ok` | 29 | 2309 | 303 |  |
+| `maayan-2000` | `ok` | 38 | 2474 | 385 |  |
+| `meshnat-yosef` | `ok` | 4 | 5478 | 294 |  |
+| `shefa-birkat-hashem` | `ok` | 22 | 3479 | 636 |  |
+| `shuk-hayir` | `ok` | 26 | 1562 | 0 |  |
+| `super-sapir` | `ok` | 70 | 3512 | 0 |  |
+| `zol-vebegadol` | `ok` | 35 | 3804 | 1198 |  |
+| `city-market` | `ok` | 28 | 2886 | 321 |  |
+| `victory` | `ok` | 70 | 8588 | 5287 |  |
+| `mahsanei-hashuk` | `ok` | 71 | 9843 | 5068 |  |
+| `het-cohen` | `ok` | 5 | 7154 | 3197 |  |
 | `nativ-hahesed` | `down` | — | — | — | portal still unreachable (PortalError) |

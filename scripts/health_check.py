@@ -92,21 +92,23 @@ def main() -> None:
         rows.append(check_chain_geo_aware(info.slug) if info.implemented else probe_portal(info))
 
     total = len(rows)
-    live = sum(1 for r in rows if r["status"] in ("ok", "geo-blocked"))
-    color = (
-        "brightgreen" if live == total
-        else "green" if live >= total * 0.9
-        else "yellow" if live >= total * 0.7
-        else "red"
-    )
+    # coverage = chains this library implements (stable — the headline claim);
+    # reachable = chains that passed every file-type check on this run (varies
+    # with the portals: chains occasionally publish empty or late files).
+    covered = sum(1 for c in ilp.list_chains() if c.implemented)
+    reachable = sum(1 for r in rows if r["status"] in ("ok", "geo-blocked"))
 
     DOCS.joinpath("health.json").write_text(
-        json.dumps({"checked_at": checked_at, "chains": rows}, ensure_ascii=False, indent=2)
+        json.dumps({"checked_at": checked_at, "covered": covered, "total": total,
+                    "reachable": reachable, "chains": rows}, ensure_ascii=False, indent=2)
         + "\n"
     )
+    # the README badge shows COVERAGE, not daily liveness — a transient empty
+    # file from a chain's portal should not drag the project's headline number.
     DOCS.joinpath("health-badge.json").write_text(
         json.dumps(
-            {"schemaVersion": 1, "label": "chains live", "message": f"{live}/{total}", "color": color}
+            {"schemaVersion": 1, "label": "chains", "message": f"{covered}/{total}",
+             "color": "brightgreen"}
         )
         + "\n"
     )
@@ -114,9 +116,18 @@ def main() -> None:
     lines = [
         "# Chain health",
         "",
-        f"Last checked: {checked_at} (automated nightly run from a GitHub-hosted",
-        "runner outside Israel; geo-blocked = the portal only answers Israeli",
-        "IPs, verified through an Israeli proxy).",
+        f"**Coverage: {covered}/{total} chains implemented** — the full government "
+        "roster bar Nativ HaHesed, whose portal has returned HTTP 500 since "
+        "July 2026 (it stays registered and will be enabled when it returns).",
+        "",
+        f"**Last nightly check ({checked_at}): {reachable}/{total} reachable.** "
+        "The check runs from a GitHub-hosted runner outside Israel and fetches "
+        "every file type of every chain. Daily reachability fluctuates: chains "
+        "sometimes publish empty or late files, and some small chains publish "
+        "sporadically — that's the chains' portals, not the library. "
+        "`geo-blocked` = the portal only answers Israeli IPs (verified through "
+        "an Israeli proxy). `degraded` = some file types were missing/empty at "
+        "check time.",
         "",
         "| Chain | Status | Stores | Prices | Promos | Note |",
         "|---|---|---|---|---|---|",
@@ -130,7 +141,7 @@ def main() -> None:
             f"| {r.get('note', '')} |"
         )
     DOCS.joinpath("health.md").write_text("\n".join(lines) + "\n")
-    print(f"done: {live}/{total} chains live", file=sys.stderr)
+    print(f"done: coverage {covered}/{total}, reachable {reachable}/{total}", file=sys.stderr)
 
 
 if __name__ == "__main__":
