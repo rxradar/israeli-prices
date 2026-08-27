@@ -28,6 +28,7 @@ from __future__ import annotations
 
 import re
 from collections.abc import Iterator
+from datetime import datetime
 from urllib.parse import quote
 
 from ..core.http import HttpClient
@@ -107,9 +108,9 @@ class CerberusAdapter(ChainAdapter):
     ) -> Iterator[FileRef]:
         search = file_type.value if file_type else ""
         rows = self._list_dir(self._folder, search=search)
-        rows.sort(key=lambda r: r.get("time", ""), reverse=True)
 
         folder = self._folder
+        parsed_rows = []
         for row in rows:
             name = row.get("fname", "")
             if row.get("type") != "file" or not name:
@@ -123,6 +124,18 @@ class CerberusAdapter(ChainAdapter):
                 continue
             if store_id is not None and not same_store(fstore, store_id):
                 continue
+            parsed_rows.append((published, name, ftype, fstore))
+
+        # The portal's display ``time`` is not consistently sortable: live
+        # responses can interleave week-old rows ahead of today's files. The
+        # timestamp embedded in the mandated filename is the authoritative
+        # ordering signal and keeps the ChainAdapter newest-first contract.
+        parsed_rows.sort(
+            key=lambda row: (row[0] is not None, row[0] or datetime.min, row[1]),
+            reverse=True,
+        )
+
+        for published, name, ftype, fstore in parsed_rows:
             prefix = "" if folder == "/" else folder.strip("/") + "/"
             yield FileRef(
                 chain=self.info.slug,
