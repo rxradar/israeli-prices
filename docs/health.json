@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-08-27T10:17:54+00:00",
+  "checked_at": "2026-08-27T18:08:00+00:00",
   "covered": 31,
   "total": 32,
   "reachable": 29,
@@ -16,7 +16,8 @@
       "stores": 306,
       "prices": 8175,
       "promos": 1018,
-      "status": "ok"
+      "status": "geo-blocked",
+      "note": "reachable from Israeli IPs only (verified via proxy)"
     },
     {
       "slug": "wolt",
@@ -28,43 +29,44 @@
     {
       "slug": "carrefour",
       "stores": 147,
-      "prices": 11183,
+      "prices": 11214,
       "promos": 2305,
       "status": "ok"
     },
     {
       "slug": "hatzi-hinam",
       "stores": 13,
-      "prices": 595,
+      "prices": 596,
       "promos": 774,
-      "status": "ok"
+      "status": "geo-blocked",
+      "note": "reachable from Israeli IPs only (verified via proxy)"
     },
     {
       "slug": "rami-levy",
       "stores": 99,
-      "prices": 14214,
-      "promos": 2743,
+      "prices": 5245,
+      "promos": 1287,
       "status": "ok"
     },
     {
       "slug": "tiv-taam",
       "stores": 54,
-      "prices": 12815,
-      "promos": 2173,
+      "prices": 119,
+      "promos": 40,
       "status": "ok"
     },
     {
       "slug": "yochananof",
       "stores": 51,
-      "prices": 6508,
+      "prices": 11506,
       "promos": 1688,
       "status": "ok"
     },
     {
       "slug": "osher-ad",
       "stores": 24,
-      "prices": 6583,
-      "promos": 896,
+      "prices": 6586,
+      "promos": 897,
       "status": "ok"
     },
     {
@@ -77,8 +79,8 @@
     {
       "slug": "keshet-teamim",
       "stores": 27,
-      "prices": 16051,
-      "promos": 2914,
+      "prices": 14866,
+      "promos": 2917,
       "status": "ok"
     },
     {
@@ -92,22 +94,22 @@
     {
       "slug": "politzer",
       "stores": 8,
-      "prices": 12222,
-      "promos": 1487,
+      "prices": 13966,
+      "promos": 1484,
       "status": "ok"
     },
     {
       "slug": "stop-market",
       "stores": 11,
-      "prices": 18199,
+      "prices": 18028,
       "promos": 3814,
       "status": "ok"
     },
     {
       "slug": "fresh-market",
       "stores": null,
-      "prices": 8585,
-      "promos": 1553,
+      "prices": 8419,
+      "promos": 735,
       "status": "degraded",
       "note": "stores: ParseError: not valid XML: no element found: line 1, column 0"
     },
@@ -207,21 +209,24 @@
       "stores": 70,
       "prices": 8588,
       "promos": 5287,
-      "status": "ok"
+      "status": "geo-blocked",
+      "note": "reachable from Israeli IPs only (verified via proxy)"
     },
     {
       "slug": "mahsanei-hashuk",
       "stores": 71,
       "prices": 9843,
       "promos": 5068,
-      "status": "ok"
+      "status": "geo-blocked",
+      "note": "reachable from Israeli IPs only (verified via proxy)"
     },
     {
       "slug": "het-cohen",
       "stores": 5,
       "prices": 7154,
       "promos": 3197,
-      "status": "ok"
+      "status": "geo-blocked",
+      "note": "reachable from Israeli IPs only (verified via proxy)"
     },
     {
       "slug": "nativ-hahesed",
