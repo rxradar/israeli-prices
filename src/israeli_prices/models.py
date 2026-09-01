@@ -12,7 +12,35 @@ from datetime import datetime
 from decimal import Decimal
 from enum import Enum
 
-from pydantic import BaseModel
+from pydantic import BaseModel, computed_field
+
+from .gtin import to_gtin14
+
+
+class _WithItemCode(BaseModel):
+    """Base for barcode-carrying rows: keeps the raw ``item_code`` as
+    published and adds a canonical cross-chain key derived from it.
+
+    ``gtin`` is a computed field — it rides along in ``model_dump()`` /
+    ``to_df()`` / JSON as a real column (the join key), while the source
+    stays faithful 1:1 (``item_code`` is untouched). It derives the
+    GTIN-14 structurally, so it is consistent across chains regardless of
+    whether a chain populates the ``item_type`` field; ``None`` for
+    internal/weighted codes. ``is_barcoded`` is the same signal as a bool.
+    """
+
+    item_code: str  # barcode (GTIN) or chain-internal code, as published
+
+    @computed_field
+    @property
+    def gtin(self) -> str | None:
+        """Canonical GTIN-14, or ``None`` if ``item_code`` is not a barcode."""
+        return to_gtin14(self.item_code)
+
+    @property
+    def is_barcoded(self) -> bool:
+        """True if ``item_code`` is a structurally valid GTIN barcode."""
+        return self.gtin is not None
 
 
 class FileType(str, Enum):
@@ -54,10 +82,9 @@ class FileRef(BaseModel):
     published_at: datetime | None = None
 
 
-class PriceItem(BaseModel):
+class PriceItem(_WithItemCode):
     """One SKU row in a Price/PriceFull file."""
 
-    item_code: str  # barcode (GTIN) or chain-internal code
     item_type: int | None = None  # 1 = barcoded item, 0 = internal code
     name: str | None = None
     manufacturer: str | None = None
@@ -92,7 +119,7 @@ class PriceFile(BaseModel):
         return pd.DataFrame([i.model_dump() for i in self.items])
 
 
-class PromotionItem(BaseModel):
+class PromotionItem(_WithItemCode):
     """One SKU participating in a promotion.
 
     In the grouped dialect (Shufersal, Super-Pharm) reward fields sit on
@@ -100,7 +127,6 @@ class PromotionItem(BaseModel):
     are kept as published.
     """
 
-    item_code: str
     item_type: int | None = None
     is_gift_item: bool | None = None
     reward_type: int | None = None
