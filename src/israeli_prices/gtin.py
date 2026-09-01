@@ -43,7 +43,10 @@ def is_valid_gtin(code: str | None) -> bool:
     if not code:
         return False
     s = code.strip()
-    if not s.isdigit() or len(s) not in _GTIN_LENGTHS:
+    # ASCII digits only: str.isdigit() also passes exotic Unicode digits
+    # (superscripts, other scripts) that int() rejects or that would make a
+    # mixed-script key -- a barcode is ASCII 0-9.
+    if not (s.isascii() and s.isdigit()) or len(s) not in _GTIN_LENGTHS:
         return False
     return check_digit(s[:-1]) == int(s[-1])
 
@@ -79,7 +82,9 @@ def group_by_gtin(
 
     ``min_sources`` keeps only GTINs present in at least that many files
     (use 2 for "products I can actually compare"). Loose/weighted items,
-    which have no shared key, are skipped.
+    which have no shared key, are skipped. If one file lists the same GTIN
+    more than once (a multipack and a single, or a duplicate row), the last
+    row wins.
     """
     out: dict[str, dict[str, PriceItem]] = {}
     for label, pf in files.items():

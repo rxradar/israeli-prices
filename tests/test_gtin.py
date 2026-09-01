@@ -55,6 +55,16 @@ def test_to_gtin14_none_for_internal_codes():
     assert to_gtin14(None) is None
 
 
+def test_gtin_rejects_non_ascii_digit_strings_without_crashing():
+    # str.isdigit() is True for these but they are not ASCII barcodes;
+    # the helpers must return False/None, never raise.
+    superscript = "1234567²"  # length 8, trailing superscript 2
+    arabic_indic = "٥" * 13  # length 13, Arabic-Indic digit five
+    for code in (superscript, arabic_indic):
+        assert is_valid_gtin(code) is False
+        assert to_gtin14(code) is None
+
+
 # -- item properties on real fixtures -----------------------------------
 
 def test_priceitem_gtin_property():
