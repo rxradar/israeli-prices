@@ -24,6 +24,7 @@ from .exceptions import (
     ParseError,
     PortalError,
 )
+from .gtin import group_by_gtin, is_valid_gtin, to_gtin14
 from .models import (
     ChainInfo,
     FileRef,
@@ -37,7 +38,7 @@ from .models import (
     StoresFile,
 )
 
-__version__ = "0.1.1"
+__version__ = "0.2.0"
 
 __all__ = [
     "list_chains",
@@ -48,6 +49,9 @@ __all__ = [
     "get_promos",
     "download",
     "parse",
+    "to_gtin14",
+    "is_valid_gtin",
+    "group_by_gtin",
     "ChainInfo",
     "FileRef",
     "FileType",

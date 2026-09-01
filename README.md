@@ -65,6 +65,28 @@ pip install israeli-prices
 Requires Python ≥ 3.10. Optional extra: `israeli-prices[pandas]` for
 `.to_df()`.
 
+## Compare across chains
+
+Barcoded products carry the same identifier everywhere — the GTIN in
+`item_code` — so it is the join key for lining the same SKU up across
+chains. `group_by_gtin` does the join, canonicalizing UPC-12 / EAN-13 to
+GTIN-14 so encoding differences don't split one product into two:
+
+```python
+sp = ilp.get_prices("super-pharm", store_id="142")
+sh = ilp.get_prices("shufersal", store_id="001")
+
+for gtin, by_chain in ilp.group_by_gtin(
+    {"super-pharm": sp, "shufersal": sh}, min_sources=2
+).items():
+    print(gtin, {chain: it.price for chain, it in by_chain.items()})
+```
+
+Each row also exposes `item.gtin` (canonical GTIN-14, or `None`) and
+`item.is_barcoded`. Loose/weighted goods — fresh produce, deli — use
+per-chain internal codes with no shared key, so they can't be joined this
+way; `gtin` is `None` for them by design.
+
 ## Lower-level API
 
 ```python
@@ -84,7 +106,9 @@ IPs; pass a proxy via `HttpClient(proxy=...)` if you fetch from abroad.
 - Timestamps are naive local Israel time, as published.
 - Prices are `Decimal`, in ILS (`ItemPrice` from the source files).
 - `item_code` is usually a GTIN/barcode but chains also publish internal
-  codes (`item_type` distinguishes them).
+  codes (`item_type` is the retailer's own flag). Use `item.gtin` for a
+  canonical GTIN-14 (or `None`) and `group_by_gtin` to join across chains —
+  see [Compare across chains](#compare-across-chains).
 - Hebrew text is preserved as published; encodings (UTF-8 BOM, UTF-16)
   are handled transparently.
 - Freshness: chains publish incremental `Price`/`Promo` files throughout
