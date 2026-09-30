@@ -1,86 +1,86 @@
 {
-  "checked_at": "2026-08-27T18:08:00+00:00",
+  "checked_at": "2026-09-30T15:01:54+00:00",
   "covered": 31,
   "total": 32,
-  "reachable": 29,
+  "reachable": 30,
   "chains": [
     {
       "slug": "shufersal",
       "stores": 417,
-      "prices": 6543,
+      "prices": 6617,
       "promos": 1,
       "status": "ok"
     },
     {
       "slug": "super-pharm",
-      "stores": 306,
-      "prices": 8175,
-      "promos": 1018,
+      "stores": 307,
+      "prices": 9320,
+      "promos": 846,
       "status": "geo-blocked",
       "note": "reachable from Israeli IPs only (verified via proxy)"
     },
     {
       "slug": "wolt",
       "stores": 34,
-      "prices": 5270,
-      "promos": 1019,
+      "prices": 5951,
+      "promos": 816,
       "status": "ok"
     },
     {
       "slug": "carrefour",
       "stores": 147,
-      "prices": 11214,
-      "promos": 2305,
+      "prices": 11222,
+      "promos": 1572,
       "status": "ok"
     },
     {
       "slug": "hatzi-hinam",
       "stores": 13,
-      "prices": 596,
-      "promos": 774,
+      "prices": 608,
+      "promos": 719,
       "status": "geo-blocked",
       "note": "reachable from Israeli IPs only (verified via proxy)"
     },
     {
       "slug": "rami-levy",
       "stores": 99,
-      "prices": 5245,
-      "promos": 1287,
+      "prices": 5293,
+      "promos": 1108,
       "status": "ok"
     },
     {
       "slug": "tiv-taam",
       "stores": 54,
-      "prices": 119,
-      "promos": 40,
+      "prices": 134,
+      "promos": 47,
       "status": "ok"
     },
     {
       "slug": "yochananof",
       "stores": 51,
-      "prices": 11506,
-      "promos": 1688,
+      "prices": 11799,
+      "promos": 1718,
       "status": "ok"
     },
     {
       "slug": "osher-ad",
       "stores": 24,
-      "prices": 6586,
-      "promos": 897,
+      "prices": 6543,
+      "promos": 909,
       "status": "ok"
     },
     {
       "slug": "dor-alon",
-      "stores": 156,
-      "prices": 768,
-      "promos": 323,
+      "stores": 158,
+      "prices": 1711,
+      "promos": 358,
       "status": "ok"
     },
     {
       "slug": "keshet-teamim",
       "stores": 27,
-      "prices": 14866,
-      "promos": 2917,
+      "prices": 6352,
+      "promos": 1847,
       "status": "ok"
     },
     {
@@ -94,137 +94,136 @@
     {
       "slug": "politzer",
       "stores": 8,
-      "prices": 13966,
-      "promos": 1484,
+      "prices": 15055,
+      "promos": 1455,
       "status": "ok"
     },
     {
       "slug": "stop-market",
       "stores": 11,
-      "prices": 18028,
-      "promos": 3814,
+      "prices": 17498,
+      "promos": 4047,
       "status": "ok"
     },
     {
       "slug": "fresh-market",
-      "stores": null,
-      "prices": 8419,
-      "promos": 735,
-      "status": "degraded",
-      "note": "stores: ParseError: not valid XML: no element found: line 1, column 0"
+      "stores": 47,
+      "prices": 8310,
+      "promos": 801,
+      "status": "ok"
     },
     {
       "slug": "salach-dabach",
-      "stores": 10,
-      "prices": 13207,
-      "promos": 2072,
+      "stores": 12,
+      "prices": 12667,
+      "promos": 2128,
       "status": "ok"
     },
     {
       "slug": "super-yuda",
       "stores": 26,
-      "prices": 6696,
-      "promos": 437,
+      "prices": 6393,
+      "promos": 445,
       "status": "ok"
     },
     {
       "slug": "yellow",
       "stores": 242,
-      "prices": 2874,
-      "promos": 645,
+      "prices": 1102,
+      "promos": 672,
       "status": "ok"
     },
     {
       "slug": "good-pharm",
       "stores": 82,
-      "prices": 3418,
-      "promos": 671,
+      "prices": 3379,
+      "promos": 371,
       "status": "ok"
     },
     {
       "slug": "super-bareket",
       "stores": 14,
-      "prices": 6833,
-      "promos": 1459,
+      "prices": 6580,
+      "promos": 1019,
       "status": "ok"
     },
     {
       "slug": "king-store",
       "stores": 29,
-      "prices": 2309,
-      "promos": 303,
+      "prices": 2458,
+      "promos": 285,
       "status": "ok"
     },
     {
       "slug": "maayan-2000",
       "stores": 38,
-      "prices": 2474,
-      "promos": 385,
+      "prices": 2530,
+      "promos": 422,
       "status": "ok"
     },
     {
       "slug": "meshnat-yosef",
       "stores": 4,
-      "prices": 5478,
-      "promos": 294,
+      "prices": 5517,
+      "promos": 266,
       "status": "ok"
     },
     {
       "slug": "shefa-birkat-hashem",
       "stores": 22,
-      "prices": 3479,
-      "promos": 636,
+      "prices": 3978,
+      "promos": 653,
       "status": "ok"
     },
     {
       "slug": "shuk-hayir",
       "stores": 26,
-      "prices": 1562,
+      "prices": 1451,
       "promos": 0,
       "status": "ok"
     },
     {
       "slug": "super-sapir",
-      "stores": 70,
-      "prices": 3512,
-      "promos": 0,
+      "stores": 72,
+      "prices": 1003,
+      "promos": 57,
       "status": "ok"
     },
     {
       "slug": "zol-vebegadol",
       "stores": 35,
-      "prices": 3804,
-      "promos": 1198,
+      "prices": 3826,
+      "promos": 1234,
       "status": "ok"
     },
     {
       "slug": "city-market",
       "stores": 28,
-      "prices": 2886,
-      "promos": 321,
+      "prices": 2964,
+      "promos": 223,
       "status": "ok"
     },
     {
       "slug": "victory",
       "stores": 70,
-      "prices": 8588,
-      "promos": 5287,
+      "prices": 10058,
+      "promos": 5151,
       "status": "geo-blocked",
       "note": "reachable from Israeli IPs only (verified via proxy)"
     },
     {
       "slug": "mahsanei-hashuk",
       "stores": 71,
-      "prices": 9843,
-      "promos": 5068,
+      "prices": 12449,
+      "promos": 6931,
       "status": "geo-blocked",
       "note": "reachable from Israeli IPs only (verified via proxy)"
     },
     {
       "slug": "het-cohen",
       "stores": 5,
-      "prices": 7154,
-      "promos": 3197,
+      "prices": 10697,
+      "promos": 3195,
       "status": "geo-blocked",
       "note": "reachable from Israeli IPs only (verified via proxy)"
     },
