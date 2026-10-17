@@ -1,16 +1,15 @@
 {
-  "checked_at": "2026-10-16T12:08:06+00:00",
+  "checked_at": "2026-10-17T11:27:19+00:00",
   "covered": 31,
   "total": 32,
-  "reachable": 27,
+  "reachable": 28,
   "chains": [
     {
       "slug": "shufersal",
-      "stores": null,
-      "prices": null,
-      "promos": null,
-      "status": "down",
-      "note": "stores: PortalError: GET https://prices.shufersal.co.il/FileObject/UpdateCategory failed after 3 attempts: The read operation timed out | prices: PortalError: GET https://prices.shufersal.co.il/FileObject/UpdateCategory failed after 3 attempts: The read operation timed out | promos: PortalError: GET"
+      "stores": 417,
+      "prices": 6581,
+      "promos": 1,
+      "status": "ok"
     },
     {
       "slug": "super-pharm",
@@ -23,15 +22,15 @@
     {
       "slug": "wolt",
       "stores": 34,
-      "prices": 6010,
-      "promos": 480,
+      "prices": 4,
+      "promos": 521,
       "status": "ok"
     },
     {
       "slug": "carrefour",
       "stores": 147,
-      "prices": 11133,
-      "promos": 1575,
+      "prices": 11135,
+      "promos": 1565,
       "status": "ok"
     },
     {
@@ -45,8 +44,8 @@
     {
       "slug": "rami-levy",
       "stores": 99,
-      "prices": 5221,
-      "promos": 1071,
+      "prices": 5222,
+      "promos": 1069,
       "status": "ok"
     },
     {
@@ -59,28 +58,28 @@
     {
       "slug": "yochananof",
       "stores": 51,
-      "prices": 11787,
-      "promos": 1306,
+      "prices": 11775,
+      "promos": 1269,
       "status": "ok"
     },
     {
       "slug": "osher-ad",
       "stores": 24,
       "prices": 6364,
-      "promos": 709,
+      "promos": 678,
       "status": "ok"
     },
     {
       "slug": "dor-alon",
       "stores": 158,
-      "prices": 5995,
-      "promos": 633,
+      "prices": 1200,
+      "promos": 313,
       "status": "ok"
     },
     {
       "slug": "keshet-teamim",
-      "stores": 27,
-      "prices": 6400,
+      "stores": 28,
+      "prices": 6449,
       "promos": 1695,
       "status": "ok"
     },
@@ -95,136 +94,136 @@
     {
       "slug": "politzer",
       "stores": 8,
-      "prices": 10679,
-      "promos": 1190,
+      "prices": 10693,
+      "promos": 1195,
       "status": "ok"
     },
     {
       "slug": "stop-market",
       "stores": 11,
-      "prices": 17472,
-      "promos": 2716,
+      "prices": 17468,
+      "promos": 2705,
       "status": "ok"
     },
     {
       "slug": "fresh-market",
       "stores": 46,
-      "prices": 8267,
-      "promos": 699,
+      "prices": 8283,
+      "promos": 696,
       "status": "ok"
     },
     {
       "slug": "salach-dabach",
       "stores": 12,
-      "prices": 12488,
-      "promos": 1792,
+      "prices": 12482,
+      "promos": 1794,
       "status": "ok"
     },
     {
       "slug": "super-yuda",
       "stores": 26,
-      "prices": 6394,
-      "promos": 0,
+      "prices": 4901,
+      "promos": 381,
       "status": "ok"
     },
     {
       "slug": "yellow",
       "stores": 242,
-      "prices": 1887,
+      "prices": 1883,
       "promos": 712,
       "status": "ok"
     },
     {
       "slug": "good-pharm",
       "stores": 82,
-      "prices": 3398,
-      "promos": 343,
+      "prices": 3439,
+      "promos": 346,
       "status": "ok"
     },
     {
       "slug": "super-bareket",
       "stores": 15,
-      "prices": 3838,
-      "promos": 652,
+      "prices": 3955,
+      "promos": 615,
       "status": "ok"
     },
     {
       "slug": "king-store",
       "stores": 48,
-      "prices": 2352,
+      "prices": 2359,
       "promos": 309,
       "status": "ok"
     },
     {
       "slug": "maayan-2000",
       "stores": 38,
-      "prices": 2774,
-      "promos": 359,
+      "prices": 2946,
+      "promos": 371,
       "status": "ok"
     },
     {
       "slug": "meshnat-yosef",
       "stores": 4,
-      "prices": 5428,
+      "prices": 5446,
       "promos": 206,
       "status": "ok"
     },
     {
       "slug": "shefa-birkat-hashem",
       "stores": 22,
-      "prices": 3772,
-      "promos": 533,
+      "prices": 3953,
+      "promos": 543,
       "status": "ok"
     },
     {
       "slug": "shuk-hayir",
       "stores": 26,
-      "prices": 2066,
+      "prices": 2130,
       "promos": 0,
       "status": "ok"
     },
     {
       "slug": "super-sapir",
       "stores": 73,
-      "prices": 1175,
+      "prices": 1189,
       "promos": 79,
       "status": "ok"
     },
     {
       "slug": "zol-vebegadol",
       "stores": 35,
-      "prices": 4283,
-      "promos": 488,
+      "prices": 4285,
+      "promos": 487,
       "status": "ok"
     },
     {
       "slug": "city-market",
       "stores": 28,
-      "prices": 4301,
+      "prices": 4315,
       "promos": 0,
       "status": "ok"
     },
     {
       "slug": "victory",
       "stores": 70,
-      "prices": 9914,
-      "promos": 4294,
+      "prices": 8725,
+      "promos": 4481,
       "status": "geo-blocked",
       "note": "reachable from Israeli IPs only (verified via proxy)"
     },
     {
       "slug": "mahsanei-hashuk",
       "stores": 71,
-      "prices": 12397,
-      "promos": 6060,
+      "prices": 12354,
+      "promos": 5953,
       "status": "geo-blocked",
       "note": "reachable from Israeli IPs only (verified via proxy)"
     },
     {
       "slug": "het-cohen",
       "stores": 5,
-      "prices": 8939,
-      "promos": 2453,
+      "prices": 10697,
+      "promos": 2748,
       "status": "geo-blocked",
       "note": "reachable from Israeli IPs only (verified via proxy)"
     },
