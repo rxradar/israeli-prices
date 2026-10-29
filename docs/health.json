@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-28T13:52:31+00:00",
+  "checked_at": "2026-10-29T13:58:31+00:00",
   "covered": 31,
   "total": 32,
   "reachable": 25,
@@ -22,15 +22,15 @@
     {
       "slug": "wolt",
       "stores": 34,
-      "prices": 0,
-      "promos": 525,
+      "prices": 5838,
+      "promos": 569,
       "status": "ok"
     },
     {
       "slug": "carrefour",
       "stores": 147,
-      "prices": 9431,
-      "promos": 1541,
+      "prices": 11056,
+      "promos": 1687,
       "status": "geo-blocked",
       "note": "reachable from Israeli IPs only (verified via proxy)"
     },
@@ -45,8 +45,8 @@
     {
       "slug": "rami-levy",
       "stores": 99,
-      "prices": 5218,
-      "promos": 1082,
+      "prices": 5214,
+      "promos": 1081,
       "status": "ok"
     },
     {
@@ -59,29 +59,29 @@
     {
       "slug": "yochananof",
       "stores": 51,
-      "prices": 11774,
-      "promos": 1355,
+      "prices": 11766,
+      "promos": 2726,
       "status": "ok"
     },
     {
       "slug": "osher-ad",
       "stores": 24,
-      "prices": 6168,
-      "promos": 731,
+      "prices": 6147,
+      "promos": 736,
       "status": "ok"
     },
     {
       "slug": "dor-alon",
       "stores": 157,
-      "prices": 2094,
-      "promos": 325,
+      "prices": 1851,
+      "promos": 324,
       "status": "ok"
     },
     {
       "slug": "keshet-teamim",
       "stores": 28,
       "prices": 6347,
-      "promos": 1695,
+      "promos": 1377,
       "status": "ok"
     },
     {
@@ -95,112 +95,112 @@
     {
       "slug": "politzer",
       "stores": 8,
-      "prices": 14474,
-      "promos": 1202,
+      "prices": 13652,
+      "promos": 1198,
       "status": "ok"
     },
     {
       "slug": "stop-market",
       "stores": 11,
-      "prices": 17494,
-      "promos": 2766,
+      "prices": 18288,
+      "promos": 3592,
       "status": "ok"
     },
     {
       "slug": "fresh-market",
-      "stores": 46,
-      "prices": 9181,
-      "promos": 1367,
+      "stores": 48,
+      "prices": 9177,
+      "promos": 1368,
       "status": "ok"
     },
     {
       "slug": "salach-dabach",
       "stores": 12,
-      "prices": 12387,
-      "promos": 1791,
+      "prices": 16972,
+      "promos": 1783,
       "status": "ok"
     },
     {
       "slug": "super-yuda",
       "stores": 26,
-      "prices": 6402,
+      "prices": 6400,
       "promos": 378,
       "status": "ok"
     },
     {
       "slug": "yellow",
       "stores": 242,
-      "prices": 2278,
-      "promos": 657,
+      "prices": 1650,
+      "promos": 710,
       "status": "ok"
     },
     {
       "slug": "good-pharm",
       "stores": 83,
-      "prices": 3363,
-      "promos": 363,
+      "prices": 3370,
+      "promos": 364,
       "status": "ok"
     },
     {
       "slug": "super-bareket",
       "stores": 15,
-      "prices": 4554,
-      "promos": 685,
+      "prices": 4566,
+      "promos": 687,
       "status": "ok"
     },
     {
       "slug": "king-store",
       "stores": 48,
-      "prices": 2333,
-      "promos": 301,
+      "prices": 2346,
+      "promos": 303,
       "status": "ok"
     },
     {
       "slug": "maayan-2000",
       "stores": 38,
-      "prices": 2758,
-      "promos": 371,
+      "prices": 2759,
+      "promos": 369,
       "status": "ok"
     },
     {
       "slug": "meshnat-yosef",
       "stores": 4,
-      "prices": 5415,
-      "promos": 214,
+      "prices": 5398,
+      "promos": 217,
       "status": "ok"
     },
     {
       "slug": "shefa-birkat-hashem",
       "stores": 22,
-      "prices": 3688,
-      "promos": 564,
+      "prices": 3601,
+      "promos": 545,
       "status": "ok"
     },
     {
       "slug": "shuk-hayir",
       "stores": 26,
-      "prices": 1356,
+      "prices": 1463,
       "promos": 0,
       "status": "ok"
     },
     {
       "slug": "super-sapir",
       "stores": 130,
-      "prices": 2236,
+      "prices": 2243,
       "promos": 0,
       "status": "ok"
     },
     {
       "slug": "zol-vebegadol",
       "stores": 35,
-      "prices": 4267,
-      "promos": 488,
+      "prices": 4272,
+      "promos": 487,
       "status": "ok"
     },
     {
       "slug": "city-market",
       "stores": 71,
-      "prices": 4325,
+      "prices": 4319,
       "promos": 0,
       "status": "ok"
     },
@@ -210,7 +210,7 @@
       "prices": null,
       "promos": null,
       "status": "down",
-      "note": "stores: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after 3 attempts: 401 Auth Failed (code: ip_blacklisted) | prices: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after 3 attempts: 401 Auth Failed (code: ip_blacklisted) | promos: PortalError: GET h"
+      "note": "stores: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after 3 attempts: 502 Proxy Error: server_error Error creating ext request: Destination host connect timeout | prices: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after 3 attempts: 502 Proxy Error"
     },
     {
       "slug": "mahsanei-hashuk",
@@ -218,7 +218,7 @@
       "prices": null,
       "promos": null,
       "status": "down",
-      "note": "stores: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after 3 attempts: 401 Auth Failed (code: ip_blacklisted) | prices: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after 3 attempts: 401 Auth Failed (code: ip_blacklisted) | promos: PortalError: GET h"
+      "note": "stores: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after 3 attempts: 502 Proxy Error: server_error Error creating ext request: Destination host connect timeout | prices: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after 3 attempts: 502 Proxy Error"
     },
     {
       "slug": "het-cohen",
@@ -226,7 +226,7 @@
       "prices": null,
       "promos": null,
       "status": "down",
-      "note": "stores: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after 3 attempts: 401 Auth Failed (code: ip_blacklisted) | prices: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after 3 attempts: 401 Auth Failed (code: ip_blacklisted) | promos: PortalError: GET h"
+      "note": "stores: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after 3 attempts: 502 Proxy Error: server_error Error creating ext request: Destination host connect timeout | prices: PortalError: GET https://laibcatalog.co.il/webapi/api/getfiles failed after 3 attempts: 502 Proxy Error"
     },
     {
       "slug": "nativ-hahesed",
